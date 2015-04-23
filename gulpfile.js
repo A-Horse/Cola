@@ -189,10 +189,20 @@ gulp.task('sass:foundation', function(done){
   gulp.src(['components/foundation/sass/**/.scss'])
     .pipe(plumber())
     .pipe(sass())
-    .pipe(gulp.dest('dest/css/foundation'))
+    .pipe(gulp.dest('dest/css/foundation/css'))
     .pipe(connect.reload())
     .pipe(livereload());
 });
+
+gulp.task('sass:bootstrap', function(done){
+  gulp.src(['components/bootstrap/stylesheets/**/.scss'])
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(gulp.dest('dest/css/bootstrap/css'))
+    .pipe(connect.reload())
+    .pipe(livereload());
+});
+
 
 gulp.task('sass:scss', function(done){
   gulp.src(['scss/**/*.scss'])
@@ -207,14 +217,34 @@ gulp.task('sass:scss', function(done){
 //watch part
 //
 gulp.task('watch:foundation', function(done){
-
+  gulp.watch(['components/foundation/scss/**/*.scss'],
+            ['sass:foundation']);
 });
 
+gulp.task('watch:bootstrap', function(done){
+  gulp.watch(['components/bootstrap/stylesheets/**/*.scss'],
+             ['sass:bootstrap']);
+});
+
+//connect
+//
+gulp.watch('connect', function(done){
+  connect.server({
+    root: "app",
+    host: "0.0.0.0",
+    port: 8989,
+    livereload: true
+  });
+});
 
 // ---------------------------------------------------------------------
 // | My Part Task                                                |
 // ---------------------------------------------------------------------
 
 gulp.task('watch', function(done){
+
+});
+
+gulp.task('serve', function(done){
 
 });
