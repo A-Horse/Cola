@@ -176,7 +176,7 @@ gulp.task('build', function (done) {
     done);
 });
 
-gulp.task('default', ['build']);
+//gulp.task('default', ['build']);
 
 
 // ---------------------------------------------------------------------
@@ -189,7 +189,7 @@ gulp.task('sass:foundation', function(done){
   gulp.src(['components/foundation/sass/**/.scss'])
     .pipe(plumber())
     .pipe(sass())
-    .pipe(gulp.dest('dest/css/foundation/css'))
+    .pipe(gulp.dest('dist/css/foundation/css'))
     .pipe(connect.reload())
     .pipe(livereload());
 });
@@ -198,7 +198,7 @@ gulp.task('sass:bootstrap', function(done){
   gulp.src(['components/bootstrap/stylesheets/**/.scss'])
     .pipe(plumber())
     .pipe(sass())
-    .pipe(gulp.dest('dest/css/bootstrap/css'))
+    .pipe(gulp.dest('dist/css/bootstrap/css'))
     .pipe(connect.reload())
     .pipe(livereload());
 });
@@ -208,7 +208,7 @@ gulp.task('sass:scss', function(done){
   gulp.src(['scss/**/*.scss'])
     .pipe(plumber())
     .pipe(sass())
-    .pipe(gulp.dest('dest/css'))
+    .pipe(gulp.dest('dist/css'))
     .pipe(connect.reload())
     .pipe(livereload());
 });
@@ -228,7 +228,7 @@ gulp.task('watch:bootstrap', function(done){
 
 //connect
 //
-gulp.watch('connect', function(done){
+gulp.task('connect', function(done){
   connect.server({
     root: "app",
     host: "0.0.0.0",
@@ -236,6 +236,26 @@ gulp.watch('connect', function(done){
     livereload: true
   });
 });
+
+gulp.task('connect:html', function() {
+  gulp.src('app/**/*.html')
+    .pipe(connect.reload());
+});
+
+gulp.task('connect:css', function() {
+  gulp.src('app/css/**/*.css')
+    .pipe(connect.reload());
+});
+
+//connection:watch
+//
+
+gulp.task('connect:watch', function() {
+  gulp.watch(['app/**/*.html'], ['connect:html']);
+  gulp.watch(['app/css/**/*.css'], [ 'connect:css']);
+});
+
+
 
 // ---------------------------------------------------------------------
 // | My Part Task                                                |
@@ -245,6 +265,10 @@ gulp.task('watch', function(done){
 
 });
 
-gulp.task('serve', function(done){
-
-});
+gulp.task('serve',
+          ['connect',
+           'connect:html',
+           'connect:css',
+           'connect:watch',
+           'watch:foundation',
+           'watch:bootstrap']);

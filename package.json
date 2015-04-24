@@ -1,0 +1,77 @@
+{
+  "name": "Cola",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/A-Horse/Cola.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A-Horse/Cola/issues"
+  },
+  "h5bp-configs": {
+    "directories": {
+      "archive": "archive",
+      "dist": "dist",
+      "src": "app",
+      "test": "test"
+    }
+  },
+  "homepage": "https://github.com/A-Horse/Cola",
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "debug": "^2.1.3",
+    "duplexer": "^0.1.1",
+    "escape-string-regexp": "^1.0.3",
+    "event-stream": "^3.3.0",
+    "from": "^0.1.3",
+    "gulp": "^3.8.11",
+    "gulp-sass": "^1.3.3",
+    "gulp-util": "^3.0.4",
+    "gulp-watch": "^4.2.4",
+    "lodash.assign": "^3.1.0",
+    "map-stream": "0.0.5",
+    "pause-stream": "0.0.11",
+    "split": "^0.3.3",
+    "stream-combiner": "^0.2.1",
+    "through": "^2.3.7",
+    "tiny-lr": "^0.1.5",
+    "vinyl": "^0.4.6"
+  },
+  "devDependencies": {
+    "apache-server-configs": "2.13.0",
+    "archiver": "^0.14.3",
+    "array-uniq": "^1.0.2",
+    "brace-expansion": "^1.1.0",
+    "browser-sync": "^2.6.4",
+    "del": "^1.1.1",
+    "diff": "^1.3.2",
+    "glob": "^5.0.1",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-header": "^1.2.2",
+    "gulp-jscs": "^1.4.0",
+    "gulp-jshint": "^1.9.2",
+    "gulp-livereload": "^3.8.0",
+    "gulp-load-plugins": "^0.9.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-replace": "^0.5.3",
+    "inflight": "^1.0.4",
+    "inherits": "^2.0.1",
+    "jquery": "1.11.2",
+    "jshint-stylish": "^1.0.1",
+    "minimatch": "^2.0.4",
+    "mocha": "^2.1.0",
+    "normalize.css": "3.0.2",
+    "once": "^1.3.1",
+    "run-sequence": "^1.0.2",
+    "supports-color": "^1.3.1"
+  }
+}
