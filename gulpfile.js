@@ -185,30 +185,30 @@ gulp.task('build', function (done) {
 
 //Sass part
 //
-gulp.task('sass:foundation', function(done){
-  gulp.src(['components/foundation/sass/**/.scss'])
+gulp.task('sass:foundation', function(){
+  gulp.src(['components/foundation/scss/**/*.scss'])
     .pipe(plumber())
     .pipe(sass())
-    .pipe(gulp.dest('dist/css/foundation/css'))
+    .pipe(gulp.dest('app/css'))
     .pipe(connect.reload())
     .pipe(livereload());
 });
 
-gulp.task('sass:bootstrap', function(done){
-  gulp.src(['components/bootstrap/stylesheets/**/.scss'])
+gulp.task('sass:bootstrap', function(){
+  gulp.src(['components/bootstrap/stylesheets/**/*.scss'])
     .pipe(plumber())
     .pipe(sass())
-    .pipe(gulp.dest('dist/css/bootstrap/css'))
+    .pipe(gulp.dest('app/css'))
     .pipe(connect.reload())
     .pipe(livereload());
 });
 
 
-gulp.task('sass:scss', function(done){
+gulp.task('sass:app', function(){
   gulp.src(['scss/**/*.scss'])
     .pipe(plumber())
     .pipe(sass())
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('app/css'))
     .pipe(connect.reload())
     .pipe(livereload());
 });
@@ -216,19 +216,24 @@ gulp.task('sass:scss', function(done){
 
 //watch part
 //
-gulp.task('watch:foundation', function(done){
+gulp.task('watch:foundation', function(){
   gulp.watch(['components/foundation/scss/**/*.scss'],
             ['sass:foundation']);
 });
 
-gulp.task('watch:bootstrap', function(done){
+gulp.task('watch:bootstrap', function(){
   gulp.watch(['components/bootstrap/stylesheets/**/*.scss'],
              ['sass:bootstrap']);
 });
 
+gulp.task('watch:app', function(){
+  gulp.watch(['scss/**/*.scss'],
+             ['sass:app']);
+});
+
 //connect
 //
-gulp.task('connect', function(done){
+gulp.task('connect', function(){
   connect.server({
     root: "app",
     host: "0.0.0.0",
@@ -261,14 +266,19 @@ gulp.task('connect:watch', function() {
 // | My Part Task                                                |
 // ---------------------------------------------------------------------
 
-gulp.task('watch', function(done){
+gulp.task('watch', function(){
 
 });
 
 gulp.task('serve',
-          ['connect',
+          ['sass:bootstrap',
+           'sass:foundation',
+           'sass:app',
+            'connect',
            'connect:html',
            'connect:css',
            'connect:watch',
            'watch:foundation',
-           'watch:bootstrap']);
+           'watch:bootstrap',
+           'watch:app'
+          ]);

@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/A-Horse/Cola",
   "dependencies": {
+    "angular-ui-router": "^0.2.14",
     "chalk": "^1.0.0",
     "debug": "^2.1.3",
     "duplexer": "^0.1.1",
