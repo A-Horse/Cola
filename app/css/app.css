@@ -1,2 +1,30 @@
-.check {
-  display: none; }
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0px;
+  padding: 0px; }
+
+.splash {
+  background-image: url('/img/coffee_dash.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 655px;
+  position: fixed;
+  z-index: -1;
+  margin: 0; }
+
+.header {
+  background-color: #330000;
+  position: absolute;
+  top: 655px;
+  width: 100%;
+  height: 5rem;
+  z-index: 2; }
+
+.project {
+  position: absolute;
+  top: 655px;
+  width: 100%;
+  z-index: 2;
+  background-color: #FFF; }
