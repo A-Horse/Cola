@@ -6,10 +6,15 @@ angular.module('coffee', ['ui.router', 'textAngular', 'coffee.controllers'])
               templateUrl: 'templates/dash.html',
               controller: 'DashCtrl'
             })
-        .state('editor', {
-          url: '/editor',
-          templateUrl: 'templates/editor.html',
-          controller: 'EditCtrl'
+        .state('css', {
+          url: '/css',
+          templateUrl: 'templates/css.html',
+          controller: 'CssCtrl'
+        })
+        .state('css', {
+          url: '/css',
+          templateUrl: 'templates/css.html',
+          controller: 'CssCtrl'
         });
         $urlRouterProvider.otherwise('/dash');
     });

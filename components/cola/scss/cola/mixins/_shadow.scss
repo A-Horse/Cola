@@ -1,0 +1,6 @@
+//shadow
+@mixin micro-shaow($color:#555555) {
+    -moz-box-shadow: 2px 4px 5px 0px #d7d7d7;
+    -webkit-box-shadow: 2px 4px 5px 0px #d7d7d7;
+    box-shadow: 2px 4px 5px 0px #d7d7d7;
+}

@@ -204,6 +204,15 @@ gulp.task('sass:bootstrap', function(){
 });
 
 
+gulp.task('sass:cola', function(){
+  gulp.src(['components/cola/scss/**/*.scss'])
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(gulp.dest('app/css'))
+    .pipe(connect.reload())
+    .pipe(livereload());
+});
+
 gulp.task('sass:app', function(){
   gulp.src(['scss/**/*.scss'])
     .pipe(plumber())
@@ -226,6 +235,11 @@ gulp.task('watch:bootstrap', function(){
              ['sass:bootstrap']);
 });
 
+gulp.task('watch:cola', function(){
+  gulp.watch(['components/cola/scss/**/*.scss'],
+             ['sass:cola']);
+});
+
 gulp.task('watch:app', function(){
   gulp.watch(['scss/**/*.scss'],
              ['sass:app']);
@@ -237,7 +251,7 @@ gulp.task('connect', function(){
   connect.server({
     root: "app",
     host: "0.0.0.0",
-    port: 8989,
+    port: 7777,
     livereload: true
   });
 });
@@ -273,6 +287,7 @@ gulp.task('watch', function(){
 gulp.task('serve',
           ['sass:bootstrap',
            'sass:foundation',
+           'sass:cola',
            'sass:app',
             'connect',
            'connect:html',
@@ -280,5 +295,6 @@ gulp.task('serve',
            'connect:watch',
            'watch:foundation',
            'watch:bootstrap',
+           'watch:cola',
            'watch:app'
           ]);
