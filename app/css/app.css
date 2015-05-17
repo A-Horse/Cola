@@ -1,70 +1,32 @@
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-  margin: 0px;
-  padding: 0px; }
+.slide-animate-container {
+  position: relative;
+  background: white;
+  border: 1px solid black;
+  height: 40px;
+  overflow: hidden; }
 
-/*-------splash----------- */
-.splash {
-  background-image: url('/img/coffee_dash.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: top;
-  background-size: 100% auto;
-  width: 100%;
-  height: 655px;
-  position: fixed;
-  z-index: -1;
-  margin: 0; }
+.slide-animate {
+  padding: 10px; }
 
-/*------------header------------------*/
-.header {
-  background-color: #330000;
+.slide-animate.ng-enter, .slide-animate.ng-leave {
+  -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
   position: absolute;
-  top: 655px;
-  width: 100%;
-  height: 5rem;
-  z-index: 2; }
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  padding: 10px; }
 
-/*--------------project-------------------------*/
-.project {
-  position: absolute;
-  top: 655px;
-  width: 100%;
-  z-index: 1;
-  padding-top: 5rem;
-  background-color: #FFF; }
-  .project .project-title h2 {
-    font-family: "FS Joey Bold";
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 16px;
-    color: #2D373A;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    text-align: center;
-    width: 100%;
-    margin: 20px 0px; }
-  .project .project-title .sep {
-    width: 100%;
-    height: 2px;
-    text-align: center;
-    margin: 26px 0px 20px; }
-    .project .project-title .sep span {
-      display: inline-block;
-      vertical-align: top;
-      background-color: #2D373A;
-      width: 28px;
-      height: 2px; }
-  .project .project-title .title {
-    width: 100%;
-    font-family: "M+";
-    font-size: 40px;
-    line-height: 40px;
-    color: #2D373A;
-    letter-spacing: 0.05em;
-    text-align: center;
-    margin: 20px 0px; }
-  .project .list-project {
-    position: relative;
-    width: 100%;
-    margin: 60px 0px;
-    overflow: hidden; }
+.slide-animate.ng-enter {
+  top: -50px; }
+
+.slide-animate.ng-enter.ng-enter-active {
+  top: 0; }
+
+.slide-animate.ng-leave {
+  top: 0; }
+
+.slide-animate.ng-leave.ng-leave-active {
+  top: 50px; }

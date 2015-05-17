@@ -1,5 +1,10 @@
 
-@import 'cola/mixins';
+@import "variables";
 
-@import 'cola/form';
-@import 'cola/card';
+@import "cola/mixins";
+
+//css
+@import "cola/grid";
+
+@import "cola/forms";
+@import "cola/card";

@@ -1,2 +1,8 @@
 
 
+.card {
+  @include micro-shadow;
+  border: 1px solid #d7d7d7;
+  margin-bottom: 1.5rem;
+  }
+
