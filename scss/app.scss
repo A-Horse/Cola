@@ -36,3 +36,19 @@
 .slide-animate.ng-leave.ng-leave-active {
   top:50px;
 }
+
+.groud-title {
+  margin: 0;
+  padding: 0;
+  font:{
+  family: WaltographUI;
+  size: 3rem;
+  }
+    +hr {
+      border-top: 1.5px solid #ddd;
+      margin: {
+      top: 0;
+      bottom: 1.5rem;
+      }
+      }
+  }

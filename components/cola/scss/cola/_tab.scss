@@ -1,0 +1,121 @@
+//
+// Navs
+// --------------------------------------------------
+
+
+// Base class
+// --------------------------------------------------
+
+.tab {
+  margin-bottom: 0;
+  padding-left: 0; // Override default ul/ol
+  list-style: none;
+  @include clearfix;
+
+  > li {
+    position: relative;
+    display: block;
+
+    > a {
+      position: relative;
+      display: block;
+      padding: $tab-link-padding;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        background-color: $tab-link-hover-bg;
+      }
+    }
+
+    // Disabled state sets text to gray and nukes hover/tab effects
+    &.disabled > a {
+      color: $tab-disabled-link-color;
+
+      &:hover,
+      &:focus {
+        color: $tab-disabled-link-hover-color;
+        text-decoration: none;
+        background-color: transparent;
+        cursor: $cursor-disabled;
+      }
+    }
+  }
+
+  // Open dropdowns
+  .open > a {
+    &,
+    &:hover,
+    &:focus {
+      background-color: $tab-link-hover-bg;
+      border-color: $link-color;
+    }
+  }
+
+
+  // Prevent IE8 from misplacing imgs
+  //
+  // See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
+  > li > a > img {
+    max-width: none;
+  }
+}
+
+
+
+// Stacked pills
+.tab-stacked {
+  > li {
+    float: none;
+    + li {
+      margin-top: 2px;
+      margin-left: 0; // no need for this gap between nav items
+    }
+  }
+}
+
+
+// Nav variations
+// --------------------------------------------------
+
+// Justified nav links
+// -------------------------
+
+.tab-justified {
+  width: 100%;
+
+  > li {
+    float: none;
+    > a {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+  }
+
+  > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    > li {
+      display: table-cell;
+      width: 1%;
+      > a {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+
+// Hide tabbable panes to start, show them when `.active`
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}
+

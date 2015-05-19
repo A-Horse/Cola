@@ -22,6 +22,7 @@ var watch = require('gulp-watch');
 var livereload = require('gulp-livereload');
 var connect = require('gulp-connect');
 var plumber = require('gulp-plumber');
+var concat = require('gulp-concat');
 
 // ---------------------------------------------------------------------
 // | Helper tasks                                                      |
@@ -222,6 +223,13 @@ gulp.task('sass:app', function(){
     .pipe(livereload());
 });
 
+//concat javascript
+gulp.task('concat:cola', function() {
+  return gulp.src('components/cola/js/**/*.js')
+    .pipe(concat('cola.js'))
+    .pipe(gulp.dest('app/js/lib'));
+});
+
 
 //watch part
 //
@@ -238,6 +246,8 @@ gulp.task('watch:bootstrap', function(){
 gulp.task('watch:cola', function(){
   gulp.watch(['components/cola/scss/**/*.scss'],
              ['sass:cola']);
+  gulp.watch(['components/cola/js/**/*.js'],
+             ['concat:cola']);
 });
 
 gulp.task('watch:app', function(){

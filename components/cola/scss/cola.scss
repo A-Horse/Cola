@@ -1,10 +1,15 @@
 
 @import "variables";
+@import "functions";
 
 @import "cola/mixins";
 
 //css
+@import "cola/normalize";
 @import "cola/grid";
-
 @import "cola/forms";
 @import "cola/card";
+@import "cola/panel";
+@import "cola/tab";
+@import "cola/utilities";
+@import "cola/responsive-utilities";

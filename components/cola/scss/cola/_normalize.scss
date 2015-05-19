@@ -149,10 +149,11 @@ figure {
 /**
  * Address differences between Firefox and other browsers.
  */
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;}
+hr { display: block;
+     height: 1px;
+    border: 0;
+    border-top: 1px solid $gray-lighter;
+    padding: 0; }
 
 /**
  * Contain overflow in all browsers.

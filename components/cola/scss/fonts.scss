@@ -1,0 +1,51 @@
+$font-url: '/font/';
+
+@font-face {
+    font-family: GoodDog;
+    src: url( $font-url + 'GoodDog.otf');
+}
+
+@font-face {
+    font-family: ChunkFive;
+    src: url( $font-url + 'Chunkfive.otf');
+}
+
+@font-face {
+    font-family: DaysLater;
+    src: url( $font-url + '28DaysLater.ttf');
+}
+
+@font-face {
+    font-family: Canon;
+    src: url( $font-url + 'CANON.ttf');
+}
+
+@font-face {
+    font-family: Angelina;
+    src: url( $font-url + 'angelina.ttf');
+}
+
+@font-face {
+    font-family: FaceYourFears;
+    src: url( $font-url + 'FaceYourFears.ttf');
+}
+
+@font-face {
+    font-family: SketchRockwell;
+    src: url( $font-url + 'SketchRockwell-Bold.ttf');
+}
+
+@font-face {
+    font-family: WaltographUI;
+    src: url( $font-url + 'waltographUI.ttf');
+}
+
+@font-face {
+    font-family: FlowerBold;
+    src: url( $font-url + 'FlowerBold.ttf');
+}
+
+@font-face {
+    font-family: INDIGO;
+    src: url( $font-url + 'INDIGO.ttf');
+}
