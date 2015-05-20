@@ -60,7 +60,13 @@ audio:not([controls]) {
  * Remove the gray background color from active links in IE 10.
  */
 a {
-  background-color: transparent; }
+  background-color: transparent;
+  color: #337ab7;
+  text-decoration: none; }
+
+/* a:hover,
+/* a:active {
+/*   text-decoration: underline;}
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
@@ -361,6 +367,11 @@ td, th {
     display: table; }
   .row:after {
     clear: both; }
+
+.col-center {
+  float: none !important;
+  margin: auto;
+  overflow: auto; }
 
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
@@ -847,44 +858,44 @@ td, th {
   -webkit-box-shadow: 2px 4px 5px 0px #d7d7d7;
   box-shadow: 2px 4px 5px 0px #d7d7d7;
   border: 1px solid #d7d7d7;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem; }
-
-.card.article img {
-  width: 100%; }
-.card.article img.post-icon {
-  position: absolute;
-  width: 3rem;
-  border-radius: 50%;
-  margin-top: -3rem; }
-
-.article-card {
-  border: 1px solid #d7d7d7;
+  float: left;
+  margin-top: 1rem;
   margin-bottom: 1.5rem;
-  box-shadow: 2px 4px 5px 0px #d7d7d7; }
-  .article-card .card-content {
-    background: #fff;
-    margin: 1.25rem; }
-    .article-card .card-content .post-author {
-      text-align: center; }
-    .article-card .card-content h4 {
-      color: #CF000F; }
-    .article-card .card-content p {
-      color: #757D75; }
-    .article-card .card-content a i {
-      font-weight: 300;
-      color: #757D75;
-      margin: 0 .5rem;
-      padding: 5px 7px 5px 7px;
-      border: 1px solid #757D75;
-      border-radius: 50%; }
-    .article-card .card-content img.post-icon {
-      position: absolute;
-      width: 3rem;
-      border-radius: 50%;
-      margin-top: -3rem; }
+  margin-right: 1rem;
+  margin-left: 1rem; }
+  .card img {
+    width: 100%; }
+  .card .card-name {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: FlowerBold; }
+
+.card.article .article-content {
+  background: #fff;
+  margin: 1.25rem; }
+  .card.article .article-content .post-author {
+    text-align: center; }
+  .card.article .article-content h4 {
+    color: #CF000F; }
+  .card.article .article-content p {
+    color: #757D75; }
+  .card.article .article-content a i {
+    font-weight: 300;
+    color: #757D75;
+    margin: 0 .5rem;
+    padding: 5px 7px 5px 7px;
+    border: 1px solid #757D75;
+    border-radius: 50%; }
+    .card.article .article-content a i:hover, .card.article .article-content a i:active {
+      text-decoration: none; }
+  .card.article .article-content a i:hover {
+    color: #CF000F; }
+  .card.article .article-content img.post-icon {
+    position: absolute;
+    width: 3rem;
+    border-radius: 50%;
+    margin-top: -3rem; }
 
 .panel {
   -moz-box-shadow: 2px 4px 5px 0px #d7d7d7;
@@ -1135,3 +1146,50 @@ td, th {
 @media print {
   .hidden-print {
     display: none !important; } }
+
+code, kbd, pre, samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px; }
+
+kbd {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #fff;
+  background-color: #333;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25); }
+  kbd kbd {
+    padding: 0;
+    font-size: 100%;
+    font-weight: bold;
+    box-shadow: none; }
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #333333;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px; }
+  pre code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0; }
+
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll; }

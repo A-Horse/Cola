@@ -1,54 +1,218 @@
+@import "../components/cola/scss/color";
 .slide-animate-container {
-  position:relative;
-  background:white;
-  border:1px solid black;
-  height:40px;
-  overflow:hidden;
+    position: relative;
+    background: white;
+    border: 1px solid black;
+    height: 40px;
+    overflow: hidden;
 }
 
 .slide-animate {
-  padding:10px;
+    padding: 10px;
 }
 
-.slide-animate.ng-enter, .slide-animate.ng-leave {
-  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  display:block;
-  padding:10px;
+.slide-animate.ng-enter,
+.slide-animate.ng-leave {
+    -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    padding: 10px;
 }
 
 .slide-animate.ng-enter {
-  top:-50px;
+    top: -50px;
 }
+
 .slide-animate.ng-enter.ng-enter-active {
-  top:0;
+    top: 0;
 }
 
 .slide-animate.ng-leave {
-  top:0;
+    top: 0;
 }
+
 .slide-animate.ng-leave.ng-leave-active {
-  top:50px;
+    top: 50px;
 }
 
 .groud-title {
-  margin: 0;
-  padding: 0;
-  font:{
-  family: WaltographUI;
-  size: 3rem;
-  }
+    margin: 0;
+    padding: 0;
+    font: {
+        family: WaltographUI;
+    }
     +hr {
-      border-top: 1.5px solid #ddd;
-      margin: {
-      top: 0;
-      bottom: 1.5rem;
-      }
-      }
+        border-top: 1.5px solid #ddd;
+        margin: {
+            top: 0;
+            bottom: 1.5rem;
+        }
+    }
+}
+/******************Font************/
+
+.font-show {
+    h1 {
+        margin: {
+            top: 1rem;
+            bottom: 0;
+        }
+    }
+    p {
+        margin: {
+            top: 0;
+            bottom: 1rem;
+        }
+        font-weight: bold;
+    }
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.font-show-view {
+  .col-lg-7, .col-lg-3 .col-lg-2 {
+    margin: 0.5rem 0;
+    }
+
   }
+
+//chinese
+.chinese-fangzheng {
+    font: {
+        family: FangzhengXianxi;
+    }
+    background-color: $Lady-Wine;
+    h1 {
+        color: $Dark-Purple;
+    }
+    p {
+        color: $Grass-Gray;
+    }
+}
+
+.chinese-hanyiquantang {
+    font: {
+        family: HanyiQuanTang;
+    }
+    background-color: $Lady-Wine;
+    h1 {
+        color: $Dark-Purple;
+    }
+    p {
+        color: $Grass-Gray;
+    }
+}
+
+.chinese-lvjiandexingkai {
+    font: {
+        family: LvJianDeXingKai;
+    }
+    background-color: $Lady-Wine;
+    h1 {
+        color: $Dark-Purple;
+    }
+    p {
+        color: $Grass-Gray;
+    }
+}
+
+.chinese-dianyakaiti {
+    font: {
+        family: DianYaKaiTi;
+    }
+    background-color: $Lady-Wine;
+    h1 {
+        color: $Dark-Purple;
+    }
+    p {
+        color: $Grass-Gray;
+    }
+}
+
+.chinese-yuesong {
+    font: {
+        family: YueSong;
+    }
+    background-color: $Lady-Wine;
+    h1 {
+        color: $Dark-Purple;
+    }
+    p {
+        color: $Grass-Gray;
+    }
+}
+
+.chinese-youcan {
+    font: {
+        family: YouCan;
+    }
+    background-color: $Lady-Wine;
+    h1 {
+        color: $Dark-Purple;
+    }
+    p {
+        color: $Grass-Gray;
+    }
+}
+
+.chinese-benxiu {
+    font: {
+        family: BenXiu;
+    }
+    background-color: $Lady-Wine;
+    h1 {
+        color: $Dark-Purple;
+    }
+    p {
+        color: $Grass-Gray;
+    }
+}
+
+.chinese-outi {
+    font: {
+        family: OuTi;
+    }
+    background-color: $Lady-Wine;
+    h1 {
+        color: $Dark-Purple;
+    }
+    p {
+        color: $Grass-Gray;
+    }
+}
+
+.font-name {
+  padding: {
+  left: 1rem;
+  }
+  font-family: FangzhengXianxi;
+  }
+
+.font-color-illustrate{
+  font-family: FangzhengXianxi;
+  }
+/************Color**************/
+
+.color-view {
+    h1, h2 {
+        font: {
+            family: FlowerBold;
+        }
+    }
+    h3 {
+        font: {
+            family: Economica-Bold;
+        }
+    }
+    color: #BECC8C;
+}
+
+.color-container {
+    height: 3rem;
+    border-radius: 1rem;
+}

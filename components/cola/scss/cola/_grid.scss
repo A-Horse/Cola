@@ -40,7 +40,11 @@
   @include make-row;
 }
 
-
+.col-center {
+  float: none !important;
+  margin: auto;
+  overflow: auto;
+  }
 
 
 

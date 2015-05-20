@@ -223,6 +223,17 @@ gulp.task('sass:app', function(){
     .pipe(livereload());
 });
 
+
+gulp.task('sass:font-awesome', function(){
+  gulp.src(['components/font-awesome/**/*.scss'])
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(gulp.dest('app/css'))
+    .pipe(connect.reload())
+    .pipe(livereload());
+});
+
+
 //concat javascript
 gulp.task('concat:cola', function() {
   return gulp.src('components/cola/js/**/*.js')
@@ -248,6 +259,11 @@ gulp.task('watch:cola', function(){
              ['sass:cola']);
   gulp.watch(['components/cola/js/**/*.js'],
              ['concat:cola']);
+});
+
+gulp.task('watch:font-awesome', function(){
+  gulp.watch(['components/font-awesome/**/*.scss'],
+             ['sass:font-awesome']);
 });
 
 gulp.task('watch:app', function(){
@@ -299,12 +315,14 @@ gulp.task('serve',
            'sass:foundation',
            'sass:cola',
            'sass:app',
-            'connect',
+           'sass:font-awesome',
+           'connect',
            'connect:html',
            'connect:css',
            'connect:watch',
            'watch:foundation',
            'watch:bootstrap',
            'watch:cola',
-           'watch:app'
+           'watch:app',
+           'watch:font-awesome'
           ]);

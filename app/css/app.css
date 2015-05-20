@@ -34,9 +34,106 @@
 .groud-title {
   margin: 0;
   padding: 0;
-  font-family: WaltographUI;
-  font-size: 3rem; }
+  font-family: WaltographUI; }
   .groud-title + hr {
     border-top: 1.5px solid #ddd;
     margin-top: 0;
     margin-bottom: 1.5rem; }
+
+/******************Font************/
+.font-show {
+  padding: 1rem;
+  border-radius: 1rem; }
+  .font-show h1 {
+    margin-top: 1rem;
+    margin-bottom: 0; }
+  .font-show p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: bold; }
+
+.font-show-view .col-lg-7, .font-show-view .col-lg-3 .col-lg-2 {
+  margin: 0.5rem 0; }
+
+.chinese-fangzheng {
+  font-family: FangzhengXianxi;
+  background-color: #E95E47; }
+  .chinese-fangzheng h1 {
+    color: #561D49; }
+  .chinese-fangzheng p {
+    color: #B8DB96; }
+
+.chinese-hanyiquantang {
+  font-family: HanyiQuanTang;
+  background-color: #E95E47; }
+  .chinese-hanyiquantang h1 {
+    color: #561D49; }
+  .chinese-hanyiquantang p {
+    color: #B8DB96; }
+
+.chinese-lvjiandexingkai {
+  font-family: LvJianDeXingKai;
+  background-color: #E95E47; }
+  .chinese-lvjiandexingkai h1 {
+    color: #561D49; }
+  .chinese-lvjiandexingkai p {
+    color: #B8DB96; }
+
+.chinese-dianyakaiti {
+  font-family: DianYaKaiTi;
+  background-color: #E95E47; }
+  .chinese-dianyakaiti h1 {
+    color: #561D49; }
+  .chinese-dianyakaiti p {
+    color: #B8DB96; }
+
+.chinese-yuesong {
+  font-family: YueSong;
+  background-color: #E95E47; }
+  .chinese-yuesong h1 {
+    color: #561D49; }
+  .chinese-yuesong p {
+    color: #B8DB96; }
+
+.chinese-youcan {
+  font-family: YouCan;
+  background-color: #E95E47; }
+  .chinese-youcan h1 {
+    color: #561D49; }
+  .chinese-youcan p {
+    color: #B8DB96; }
+
+.chinese-benxiu {
+  font-family: BenXiu;
+  background-color: #E95E47; }
+  .chinese-benxiu h1 {
+    color: #561D49; }
+  .chinese-benxiu p {
+    color: #B8DB96; }
+
+.chinese-outi {
+  font-family: OuTi;
+  background-color: #E95E47; }
+  .chinese-outi h1 {
+    color: #561D49; }
+  .chinese-outi p {
+    color: #B8DB96; }
+
+.font-name {
+  padding-left: 1rem;
+  font-family: FangzhengXianxi; }
+
+.font-color-illustrate {
+  font-family: FangzhengXianxi; }
+
+/************Color**************/
+.color-view {
+  color: #BECC8C; }
+  .color-view h1, .color-view h2 {
+    font-family: FlowerBold; }
+  .color-view h3 {
+    font-family: Economica-Bold; }
+
+.color-container {
+  height: 3rem;
+  border-radius: 1rem; }

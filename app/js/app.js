@@ -15,6 +15,16 @@ angular.module('cola', ['ui.router','ngAnimate', 'cola.controllers'])
           url: '/component',
           templateUrl: 'templates/component.html',
           controller: 'ComponentCtrl'
+        })
+        .state('color', {
+          url: '/color',
+          templateUrl: 'templates/color.html',
+          controller: 'ColorCtrl'
+        })
+        .state('font', {
+          url: '/font',
+          templateUrl: 'templates/font.html',
+          controller: 'FontCtrl'
         });
         $urlRouterProvider.otherwise('/dash');
     });

@@ -1,51 +1,119 @@
-$font-url: '/font/';
+$fancy-font-url: '/font/fancy/';
+$offcial-font-url: '/font/offcial/';
+$chinese-font-url: '/font/chinese/';
+/****************fancy***************/
 
 @font-face {
     font-family: GoodDog;
-    src: url( $font-url + 'GoodDog.otf');
+    src: url( $fancy-font-url + 'GoodDog.otf');
 }
 
 @font-face {
     font-family: ChunkFive;
-    src: url( $font-url + 'Chunkfive.otf');
+    src: url( $fancy-font-url + 'Chunkfive.otf');
 }
 
 @font-face {
     font-family: DaysLater;
-    src: url( $font-url + '28DaysLater.ttf');
+    src: url( $fancy-font-url + '28DaysLater.ttf');
 }
 
 @font-face {
     font-family: Canon;
-    src: url( $font-url + 'CANON.ttf');
+    src: url( $fancy-font-url + 'CANON.ttf');
 }
 
 @font-face {
     font-family: Angelina;
-    src: url( $font-url + 'angelina.ttf');
+    src: url( $fancy-font-url + 'angelina.ttf');
 }
 
 @font-face {
     font-family: FaceYourFears;
-    src: url( $font-url + 'FaceYourFears.ttf');
+    src: url( $fancy-font-url + 'FaceYourFears.ttf');
 }
 
 @font-face {
     font-family: SketchRockwell;
-    src: url( $font-url + 'SketchRockwell-Bold.ttf');
+    src: url( $fancy-font-url + 'SketchRockwell-Bold.ttf');
 }
 
 @font-face {
     font-family: WaltographUI;
-    src: url( $font-url + 'waltographUI.ttf');
+    src: url( $fancy-font-url + 'waltographUI.ttf');
 }
 
 @font-face {
     font-family: FlowerBold;
-    src: url( $font-url + 'FlowerBold.ttf');
+    src: url( $fancy-font-url + 'FlowerBold.ttf');
 }
 
 @font-face {
     font-family: INDIGO;
-    src: url( $font-url + 'INDIGO.ttf');
+    src: url( $fancy-font-url + 'INDIGO.ttf');
+}
+
+/****************offcial*******************/
+
+@font-face {
+    font-family: Economica-Regulaer;
+    src: url( $offcial-font-url + 'Economica-Regular-OTF.otf');
+}
+
+@font-face {
+    font-family: Economica-Bold;
+    src: url( $offcial-font-url + 'Economica-Bold-OTF.otf');
+}
+
+
+@font-face {
+    font-family: Economica-Italic;
+    src: url( $offcial-font-url + 'Economica-Italic-OTF.otf');
+}
+
+@font-face {
+    font-family: Economica-Italic;
+    src: url( $offcial-font-url + 'Economica-BoldItalic-OTF.otf');
+}
+
+
+/***********chinese**************/
+@font-face {
+    font-family: FangzhengXianxi;
+    src: url( $chinese-font-url + '方正正纤黑简体.ttf');
+}
+
+@font-face {
+    font-family: HanyiQuanTang;
+    src: url( $chinese-font-url + '汉仪全唐诗体简.ttf');
+}
+
+@font-face {
+    font-family: LvJianDeXingKai;
+    src: url( $chinese-font-url + '方正字迹-吕建德行楷简体.ttf');
+}
+
+@font-face {
+    font-family: DianYaKaiTi;
+    src: url( $chinese-font-url + '方正字迹-典雅楷体简体.ttf');
+}
+
+@font-face {
+    font-family: YueSong;
+    src: url( $chinese-font-url + '方正清刻本悦宋简体.TTF');
+}
+
+@font-face {
+    font-family: YouCan;
+    src: url( $chinese-font-url + '方正幼线简体.ttf');
+}
+
+@font-face {
+    font-family: BenXiu;
+    src: url( $chinese-font-url + '方正宋刻本秀楷简体.TTF');
+}
+
+@font-face {
+    font-family: OuTi;
+    src: url( $chinese-font-url + '歐體楷書.otf');
 }
