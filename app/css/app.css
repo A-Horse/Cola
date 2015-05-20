@@ -61,7 +61,7 @@
   .chinese-fangzheng h1 {
     color: #561D49; }
   .chinese-fangzheng p {
-    color: #B8DB96; }
+    color: #BFCD8D; }
 
 .chinese-hanyiquantang {
   font-family: HanyiQuanTang;
@@ -69,23 +69,23 @@
   .chinese-hanyiquantang h1 {
     color: #561D49; }
   .chinese-hanyiquantang p {
-    color: #B8DB96; }
+    color: #BFCD8D; }
 
 .chinese-lvjiandexingkai {
   font-family: LvJianDeXingKai;
-  background-color: #E95E47; }
+  background-color: #211508; }
   .chinese-lvjiandexingkai h1 {
-    color: #561D49; }
+    color: #E95E47; }
   .chinese-lvjiandexingkai p {
-    color: #B8DB96; }
+    color: #C7D693; }
 
 .chinese-dianyakaiti {
   font-family: DianYaKaiTi;
-  background-color: #E95E47; }
+  background-color: #211508; }
   .chinese-dianyakaiti h1 {
-    color: #561D49; }
+    color: #BFCD8D; }
   .chinese-dianyakaiti p {
-    color: #B8DB96; }
+    color: #FED23D; }
 
 .chinese-yuesong {
   font-family: YueSong;
@@ -93,7 +93,7 @@
   .chinese-yuesong h1 {
     color: #561D49; }
   .chinese-yuesong p {
-    color: #B8DB96; }
+    color: #BFCD8D; }
 
 .chinese-youcan {
   font-family: YouCan;
@@ -101,7 +101,7 @@
   .chinese-youcan h1 {
     color: #561D49; }
   .chinese-youcan p {
-    color: #B8DB96; }
+    color: #BFCD8D; }
 
 .chinese-benxiu {
   font-family: BenXiu;
@@ -109,7 +109,7 @@
   .chinese-benxiu h1 {
     color: #561D49; }
   .chinese-benxiu p {
-    color: #B8DB96; }
+    color: #BFCD8D; }
 
 .chinese-outi {
   font-family: OuTi;
@@ -117,7 +117,15 @@
   .chinese-outi h1 {
     color: #561D49; }
   .chinese-outi p {
-    color: #B8DB96; }
+    color: #BFCD8D; }
+
+.chinese-songsan {
+  font-family: SongSan;
+  background-color: #E95E47; }
+  .chinese-songsan h1 {
+    color: #561D49; }
+  .chinese-songsan p {
+    color: #BFCD8D; }
 
 .font-name {
   padding-left: 1rem;

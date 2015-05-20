@@ -89,3 +89,7 @@
 @font-face {
   font-family: OuTi;
   src: url('/font/chinese/歐體楷書.otf'); }
+
+@font-face {
+  font-family: SongSan;
+  src: url('/font/chinese/方正宋三_GBK.ttf'); }

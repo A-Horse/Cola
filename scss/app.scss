@@ -112,12 +112,12 @@
     font: {
         family: LvJianDeXingKai;
     }
-    background-color: $Lady-Wine;
+    background-color: $Dark-Coffee;
     h1 {
-        color: $Dark-Purple;
+        color: $Lady-Wine;
     }
     p {
-        color: $Grass-Gray;
+        color: $Grass-Gray-darker;
     }
 }
 
@@ -125,12 +125,12 @@
     font: {
         family: DianYaKaiTi;
     }
-    background-color: $Lady-Wine;
+    background-color: $Dark-Coffee;
     h1 {
-        color: $Dark-Purple;
+        color: $Grass-Gray;
     }
     p {
-        color: $Grass-Gray;
+        color: $Cat-Yellow;
     }
 }
 
@@ -176,6 +176,19 @@
 .chinese-outi {
     font: {
         family: OuTi;
+    }
+    background-color: $Lady-Wine;
+    h1 {
+        color: $Dark-Purple;
+    }
+    p {
+        color: $Grass-Gray;
+    }
+}
+
+.chinese-songsan {
+    font: {
+        family: SongSan;
     }
     background-color: $Lady-Wine;
     h1 {

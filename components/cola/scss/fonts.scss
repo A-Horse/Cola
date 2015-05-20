@@ -117,3 +117,8 @@ $chinese-font-url: '/font/chinese/';
     font-family: OuTi;
     src: url( $chinese-font-url + '歐體楷書.otf');
 }
+
+@font-face {
+    font-family: SongSan;
+    src: url( $chinese-font-url + '方正宋三_GBK.ttf');
+}
