@@ -40,9 +40,7 @@
   @include make-row;
 }
 
-.gap-row {
-   @include make-row(30px);
-  }
+
 
 .col-center {
   float: none !important;

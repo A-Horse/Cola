@@ -283,9 +283,3 @@
       margin: 0;
       padding: 0;
       text-align: center; }
-.css #row-gap-example {
-  background-color: #CCCCCC;
-  border: 1px solid #C7BFD3; }
-  .css #row-gap-example .col-lg-4 {
-    height: 2rem;
-    background-color: #CCCCFF; }

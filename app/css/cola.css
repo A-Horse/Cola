@@ -368,15 +368,6 @@ td, th {
   .row:after {
     clear: both; }
 
-.gap-row {
-  margin-left: -15px;
-  margin-right: -15px; }
-  .gap-row:before, .gap-row:after {
-    content: " ";
-    display: table; }
-  .gap-row:after {
-    clear: both; }
-
 .col-center {
   float: none !important;
   margin: auto;
@@ -861,6 +852,30 @@ td, th {
     margin-left: 91.66667%; }
   .col-lg-offset-12 {
     margin-left: 100%; } }
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; }
+  .form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
+  .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color: #eeeeee;
+    opacity: 1; }
+  .form-control[disabled], fieldset[disabled] .form-control {
+    cursor: false; }
 
 .card {
   -moz-box-shadow: 2px 4px 5px 0px #d7d7d7;
