@@ -1,5 +1,5 @@
 $fancy-font-url: '/font/fancy/';
-$offcial-font-url: '/font/offcial/';
+$offcial-font-url: '/font/official/';
 $chinese-font-url: '/font/chinese/';
 /****************fancy***************/
 
@@ -72,8 +72,48 @@ $chinese-font-url: '/font/chinese/';
 }
 
 @font-face {
-    font-family: Economica-Italic;
+    font-family: Economica-BoldItalic;
     src: url( $offcial-font-url + 'Economica-BoldItalic-OTF.otf');
+}
+
+@font-face {
+    font-family: BebasNeue-Bold;
+    src: url( $offcial-font-url + 'BebasNeue Bold.otf');
+}
+
+@font-face {
+    font-family: BebasNeue-Light;
+    src: url( $offcial-font-url + 'BebasNeue Light.otf');
+}
+
+@font-face {
+    font-family: BebasNeue-Book;
+    src: url( $offcial-font-url + 'BebasNeue Book.otf');
+}
+
+@font-face {
+    font-family: BebasNeue-Regular;
+    src: url( $offcial-font-url + 'BebasNeue Regular.otf');
+}
+
+@font-face {
+    font-family: BebasNeue-Thin;
+    src: url( $offcial-font-url + 'BebasNeue Thin.otf');
+}
+
+@font-face {
+    font-family: KelsonSans-Bold;
+    src: url( $offcial-font-url + 'Kelson Sans Bold.otf');
+}
+
+@font-face {
+    font-family: KelsonSans-Light;
+    src: url( $offcial-font-url + 'Kelson Sans Light.otf');
+}
+
+@font-face {
+    font-family: KelsonSans-Regular;
+    src: url( $offcial-font-url + 'Kelson Sans Regular.otf');
 }
 
 

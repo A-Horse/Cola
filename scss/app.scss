@@ -50,11 +50,189 @@
         border-top: 1.5px solid #ddd;
         margin: {
             top: 0;
-            bottom: 1.5rem;
+            bottom: 0.5rem;
         }
     }
 }
+
+.component {
+    strong {
+        color: #0099FF;
+    }
+}
+
+.css {
+    h1 {
+        color: #006699;
+    }
+    P {
+        font-family: KelsonSans-Bold;
+        margin: 0rem auto;
+        color: #990000;
+    }
+}
 /******************Font************/
+
+//font-color-scheme
+@mixin font-color-scheme1 {
+    background-color: $Lady-Wine;
+    h1 {
+        color: $Dark-Purple;
+    }
+    p {
+        color: $Grass-Gray;
+    }
+}
+
+@mixin font-color-scheme2 {
+    background-color: $Dark-Coffee;
+    h1 {
+        color: $Lady-Wine;
+    }
+    p {
+        color: $Grass-Gray-darker;
+    }
+}
+
+@mixin font-color-scheme3 {
+    background-color: $Dark-Coffee;
+    h1 {
+        color: $Grass-Gray;
+    }
+    p {
+        color: $Cat-Yellow;
+    }
+}
+
+@mixin font-color-scheme4 {
+    background-color: $Dark-Purple;
+    h1 {
+        color: $Grass-Gray-darker;
+    }
+    p {
+        color: $Columbia-Blue;
+    }
+}
+
+@mixin font-color-scheme5 {
+    background-color: $Lady-Wine;
+    h1 {
+        color: $Dark-Purple;
+    }
+    p {
+        color: $Cat-Yellow;
+    }
+}
+
+@mixin font-color-scheme6 {
+    background-color: $Dark-Purple;
+    h1 {
+        color: $Columbia-Blue-Darker;
+    }
+    p {
+        color: $Lady-Wine;
+    }
+}
+
+@mixin font-color-scheme7 {
+    background-color: $Dark-Sky-Blue;
+    h1 {
+        color: $Lady-Wine;
+    }
+    p {
+        color: black;
+    }
+}
+
+@mixin font-color-scheme8 {
+    background-color: $Jonquil;
+    h1 {
+        color: black;
+    }
+    p {
+        color: $Lady-Wine;
+    }
+}
+
+@mixin font-color-scheme9 {
+    background-color: $Dark-Purple;
+    h1 {
+        color: $Dark-Sky-Blue;
+    }
+    p {
+        color: $Grass-Gray;
+    }
+}
+
+@mixin font-color-scheme10 {
+    background-color: $Grass-Gray-darker;
+    h1 {
+        color: $Lady-Wine;
+    }
+    p {
+        color: black;
+    }
+}
+
+@mixin font-color-scheme11 {
+    background-color: $Dark-Sky-Blue;
+    h1 {
+        color: $Dark-Purple;
+    }
+    p {
+        color: black;
+    }
+}
+
+@mixin font-color-scheme12 {
+    background-color: $Jonquil;
+    h1 {
+        color: $Dark-Purple;
+    }
+    p {
+        color: black;
+    }
+}
+
+@mixin font-color-scheme13 {
+    background-color: $Dark-Coffee;
+    h1 {
+        color: $Dark-Sky-Blue;
+    }
+    p {
+        color: $Lady-Wine;
+    }
+}
+
+@mixin font-color-scheme14 {
+    background-color: $Grass-Gray;
+    h1 {
+        color: black;
+    }
+    p {
+        color: $Dark-Purple;
+    }
+}
+
+@mixin font-color-scheme15 {
+    background-color: $Dark-Purple;
+    h1 {
+        color: $Lady-Wine;
+    }
+    p {
+        color: $Dark-Sky-Blue;
+    }
+}
+
+@mixin font-color-scheme16 {
+    background-color: $Carolina-Blue;
+    h1 {
+        color: $Grass-Gray;
+    }
+    p {
+        color: $Dark-Purple;
+    }
+}
 
 .font-show {
     h1 {
@@ -75,11 +253,18 @@
 }
 
 .font-show-view {
-  .col-lg-7, .col-lg-3 .col-lg-2 {
-    margin: 0.5rem 0;
+    h1.font-show-title {
+        font-family: FaceYourFears;
+        color: $Dark-Purple;
+        +p {
+            font-family: YueSong;
+        }
     }
-
-  }
+    .col-lg-7,
+    .col-lg-3 .col-lg-2 {
+        margin: 0.5rem 0;
+    }
+}
 
 //chinese
 .chinese-fangzheng {
@@ -138,77 +323,138 @@
     font: {
         family: YueSong;
     }
-    background-color: $Lady-Wine;
-    h1 {
-        color: $Dark-Purple;
-    }
-    p {
-        color: $Grass-Gray;
-    }
+    @include font-color-scheme4;
 }
 
 .chinese-youcan {
     font: {
         family: YouCan;
     }
-    background-color: $Lady-Wine;
-    h1 {
-        color: $Dark-Purple;
-    }
-    p {
-        color: $Grass-Gray;
-    }
+    @include font-color-scheme5;
 }
 
 .chinese-benxiu {
     font: {
         family: BenXiu;
     }
-    background-color: $Lady-Wine;
-    h1 {
-        color: $Dark-Purple;
-    }
-    p {
-        color: $Grass-Gray;
-    }
+    @include font-color-scheme6;
 }
 
 .chinese-outi {
     font: {
         family: OuTi;
     }
-    background-color: $Lady-Wine;
-    h1 {
-        color: $Dark-Purple;
-    }
-    p {
-        color: $Grass-Gray;
-    }
+    @include font-color-scheme7;
 }
 
 .chinese-songsan {
     font: {
         family: SongSan;
     }
-    background-color: $Lady-Wine;
-    h1 {
-        color: $Dark-Purple;
+    @include font-color-scheme8;
+}
+
+.english-official-economica {
+    font: {
+        family: Economica-Bold;
     }
-    p {
-        color: $Grass-Gray;
+    @include font-color-scheme3;
+}
+
+.english-official-bebaseNeue {
+    font: {
+        family: BebasNeue-Bold;
     }
+    @include font-color-scheme2;
+}
+
+.english-official-kelsonsans {
+    font: {
+        family: KelsonSans-Bold;
+    }
+    @include font-color-scheme9;
+}
+
+.english-fancy-goodDog {
+    font: {
+        family: GoodDog;
+    }
+    @include font-color-scheme10;
+}
+
+.english-fancy-chunkfive {
+    font: {
+        family: ChunkFive;
+    }
+    @include font-color-scheme5;
+}
+
+.english-fancy-daysLater {
+    font: {
+        family: DaysLater;
+    }
+    @include font-color-scheme11;
+}
+
+.english-fancy-canon {
+    font: {
+        family: Canon;
+    }
+    @include font-color-scheme6;
+}
+
+.english-fancy-angelina {
+    font: {
+        family: Angelina;
+    }
+    @include font-color-scheme12;
+}
+
+.english-fancy-faceYourFears {
+    font: {
+        family: FaceYourFears;
+    }
+    @include font-color-scheme13;
+}
+
+.english-fancy-sketchRockwell {
+    font: {
+        family: SketchRockwell;
+    }
+    @include font-color-scheme14;
+}
+
+.english-fancy-waltographUI {
+    font: {
+        family: WaltographUI;
+    }
+    @include font-color-scheme15;
+}
+
+.english-fancy-flowerBold {
+    font: {
+        family: FlowerBold;
+    }
+    @include font-color-scheme16;
+}
+
+.english-fancy-indigo {
+    font: {
+        family: INDIGO;
+    }
+    @include font-color-scheme8;
 }
 
 .font-name {
-  padding: {
-  left: 1rem;
-  }
-  font-family: FangzhengXianxi;
-  }
+    padding: {
+        left: 1rem;
+    }
+    font-family: FangzhengXianxi;
+}
 
-.font-color-illustrate{
-  font-family: FangzhengXianxi;
-  }
+.font-color-illustrate {
+    font-family: FangzhengXianxi;
+}
 /************Color**************/
 
 .color-view {
@@ -228,4 +474,38 @@
 .color-container {
     height: 3rem;
     border-radius: 1rem;
+}
+/****************CSS**************/
+
+.css {
+    h2 {
+        font-family: Economica-Bold;
+        color: #666699;
+    }
+    #row-center-example {
+        background-color: #CCCCCC;
+        border: 1px solid #C7BFD3;
+        .col-center {
+            height: 2rem;
+            background-color: #CCCCFF;
+            border: 1px solid #C7BFD3;
+            p {
+                position: relative;
+                top: 50%;
+                transform: translate(0, -50%);
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+        }
+    }
+    #row-gap-example {
+        background-color: #CCCCCC;
+        border: 1px solid #C7BFD3;
+        .col-lg-4 {
+            height: 2rem;
+            background-color: #CCCCFF;
+
+        }
+    }
 }

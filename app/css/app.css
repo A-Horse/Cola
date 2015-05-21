@@ -38,7 +38,17 @@
   .groud-title + hr {
     border-top: 1.5px solid #ddd;
     margin-top: 0;
-    margin-bottom: 1.5rem; }
+    margin-bottom: 0.5rem; }
+
+.component strong {
+  color: #0099FF; }
+
+.css h1 {
+  color: #006699; }
+.css P {
+  font-family: KelsonSans-Bold;
+  margin: 0rem auto;
+  color: #990000; }
 
 /******************Font************/
 .font-show {
@@ -52,6 +62,11 @@
     margin-bottom: 1rem;
     font-weight: bold; }
 
+.font-show-view h1.font-show-title {
+  font-family: FaceYourFears;
+  color: #561D49; }
+  .font-show-view h1.font-show-title + p {
+    font-family: YueSong; }
 .font-show-view .col-lg-7, .font-show-view .col-lg-3 .col-lg-2 {
   margin: 0.5rem 0; }
 
@@ -89,11 +104,11 @@
 
 .chinese-yuesong {
   font-family: YueSong;
-  background-color: #E95E47; }
+  background-color: #561D49; }
   .chinese-yuesong h1 {
-    color: #561D49; }
+    color: #C7D693; }
   .chinese-yuesong p {
-    color: #BFCD8D; }
+    color: #C4D8E2; }
 
 .chinese-youcan {
   font-family: YouCan;
@@ -101,31 +116,135 @@
   .chinese-youcan h1 {
     color: #561D49; }
   .chinese-youcan p {
-    color: #BFCD8D; }
+    color: #FED23D; }
 
 .chinese-benxiu {
   font-family: BenXiu;
-  background-color: #E95E47; }
+  background-color: #561D49; }
   .chinese-benxiu h1 {
-    color: #561D49; }
+    color: #8CB5D6; }
   .chinese-benxiu p {
-    color: #BFCD8D; }
+    color: #E95E47; }
 
 .chinese-outi {
   font-family: OuTi;
-  background-color: #E95E47; }
+  background-color: #8CBED6; }
   .chinese-outi h1 {
-    color: #561D49; }
+    color: #E95E47; }
   .chinese-outi p {
-    color: #BFCD8D; }
+    color: black; }
 
 .chinese-songsan {
   font-family: SongSan;
-  background-color: #E95E47; }
+  background-color: #FACA16; }
   .chinese-songsan h1 {
-    color: #561D49; }
+    color: black; }
   .chinese-songsan p {
+    color: #E95E47; }
+
+.english-official-economica {
+  font-family: Economica-Bold;
+  background-color: #211508; }
+  .english-official-economica h1 {
     color: #BFCD8D; }
+  .english-official-economica p {
+    color: #FED23D; }
+
+.english-official-bebaseNeue {
+  font-family: BebasNeue-Bold;
+  background-color: #211508; }
+  .english-official-bebaseNeue h1 {
+    color: #E95E47; }
+  .english-official-bebaseNeue p {
+    color: #C7D693; }
+
+.english-official-kelsonsans {
+  font-family: KelsonSans-Bold;
+  background-color: #561D49; }
+  .english-official-kelsonsans h1 {
+    color: #8CBED6; }
+  .english-official-kelsonsans p {
+    color: #BFCD8D; }
+
+.english-fancy-goodDog {
+  font-family: GoodDog;
+  background-color: #C7D693; }
+  .english-fancy-goodDog h1 {
+    color: #E95E47; }
+  .english-fancy-goodDog p {
+    color: black; }
+
+.english-fancy-chunkfive {
+  font-family: ChunkFive;
+  background-color: #E95E47; }
+  .english-fancy-chunkfive h1 {
+    color: #561D49; }
+  .english-fancy-chunkfive p {
+    color: #FED23D; }
+
+.english-fancy-daysLater {
+  font-family: DaysLater;
+  background-color: #8CBED6; }
+  .english-fancy-daysLater h1 {
+    color: #561D49; }
+  .english-fancy-daysLater p {
+    color: black; }
+
+.english-fancy-canon {
+  font-family: Canon;
+  background-color: #561D49; }
+  .english-fancy-canon h1 {
+    color: #8CB5D6; }
+  .english-fancy-canon p {
+    color: #E95E47; }
+
+.english-fancy-angelina {
+  font-family: Angelina;
+  background-color: #FACA16; }
+  .english-fancy-angelina h1 {
+    color: #561D49; }
+  .english-fancy-angelina p {
+    color: black; }
+
+.english-fancy-faceYourFears {
+  font-family: FaceYourFears;
+  background-color: #211508; }
+  .english-fancy-faceYourFears h1 {
+    color: #8CBED6; }
+  .english-fancy-faceYourFears p {
+    color: #E95E47; }
+
+.english-fancy-sketchRockwell {
+  font-family: SketchRockwell;
+  background-color: #BFCD8D; }
+  .english-fancy-sketchRockwell h1 {
+    color: black; }
+  .english-fancy-sketchRockwell p {
+    color: #561D49; }
+
+.english-fancy-waltographUI {
+  font-family: WaltographUI;
+  background-color: #561D49; }
+  .english-fancy-waltographUI h1 {
+    color: #E95E47; }
+  .english-fancy-waltographUI p {
+    color: #8CBED6; }
+
+.english-fancy-flowerBold {
+  font-family: FlowerBold;
+  background-color: #56A0D3; }
+  .english-fancy-flowerBold h1 {
+    color: #BFCD8D; }
+  .english-fancy-flowerBold p {
+    color: #561D49; }
+
+.english-fancy-indigo {
+  font-family: INDIGO;
+  background-color: #FACA16; }
+  .english-fancy-indigo h1 {
+    color: black; }
+  .english-fancy-indigo p {
+    color: #E95E47; }
 
 .font-name {
   padding-left: 1rem;
@@ -145,3 +264,28 @@
 .color-container {
   height: 3rem;
   border-radius: 1rem; }
+
+/****************CSS**************/
+.css h2 {
+  font-family: Economica-Bold;
+  color: #666699; }
+.css #row-center-example {
+  background-color: #CCCCCC;
+  border: 1px solid #C7BFD3; }
+  .css #row-center-example .col-center {
+    height: 2rem;
+    background-color: #CCCCFF;
+    border: 1px solid #C7BFD3; }
+    .css #row-center-example .col-center p {
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
+      margin: 0;
+      padding: 0;
+      text-align: center; }
+.css #row-gap-example {
+  background-color: #CCCCCC;
+  border: 1px solid #C7BFD3; }
+  .css #row-gap-example .col-lg-4 {
+    height: 2rem;
+    background-color: #CCCCFF; }

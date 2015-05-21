@@ -43,19 +43,51 @@
 /****************offcial*******************/
 @font-face {
   font-family: Economica-Regulaer;
-  src: url('/font/offcial/Economica-Regular-OTF.otf'); }
+  src: url('/font/official/Economica-Regular-OTF.otf'); }
 
 @font-face {
   font-family: Economica-Bold;
-  src: url('/font/offcial/Economica-Bold-OTF.otf'); }
+  src: url('/font/official/Economica-Bold-OTF.otf'); }
 
 @font-face {
   font-family: Economica-Italic;
-  src: url('/font/offcial/Economica-Italic-OTF.otf'); }
+  src: url('/font/official/Economica-Italic-OTF.otf'); }
 
 @font-face {
-  font-family: Economica-Italic;
-  src: url('/font/offcial/Economica-BoldItalic-OTF.otf'); }
+  font-family: Economica-BoldItalic;
+  src: url('/font/official/Economica-BoldItalic-OTF.otf'); }
+
+@font-face {
+  font-family: BebasNeue-Bold;
+  src: url('/font/official/BebasNeue Bold.otf'); }
+
+@font-face {
+  font-family: BebasNeue-Light;
+  src: url('/font/official/BebasNeue Light.otf'); }
+
+@font-face {
+  font-family: BebasNeue-Book;
+  src: url('/font/official/BebasNeue Book.otf'); }
+
+@font-face {
+  font-family: BebasNeue-Regular;
+  src: url('/font/official/BebasNeue Regular.otf'); }
+
+@font-face {
+  font-family: BebasNeue-Thin;
+  src: url('/font/official/BebasNeue Thin.otf'); }
+
+@font-face {
+  font-family: KelsonSans-Bold;
+  src: url('/font/official/Kelson Sans Bold.otf'); }
+
+@font-face {
+  font-family: KelsonSans-Light;
+  src: url('/font/official/Kelson Sans Light.otf'); }
+
+@font-face {
+  font-family: KelsonSans-Regular;
+  src: url('/font/official/Kelson Sans Regular.otf'); }
 
 /***********chinese**************/
 @font-face {
