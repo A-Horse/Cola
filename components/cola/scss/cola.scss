@@ -1,9 +1,10 @@
 
-@import "variables";
 @import "color";
 @import "functions";
+@import "variables";
 
 @import "cola/mixins";
+@import "cola/extend";
 
 //css
 @import "cola/normalize";
@@ -15,3 +16,5 @@
 @import "cola/utilities";
 @import "cola/responsive-utilities";
 @import "cola/code";
+@import "cola/button";
+@import "cola/waves";

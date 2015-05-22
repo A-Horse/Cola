@@ -1,0 +1,3 @@
+@mixin scale($factor:.5){
+    @include transform(scale($factor));
+}
