@@ -1,4 +1,4 @@
-@mixin transition($args:200ms) {
+@mixin transition($args...) {
     -webkit-transition: $args;
     -moz-transition: $args;
     -o-transition: $args;

@@ -4,14 +4,10 @@
   <h2>Base</h2>
   <div class="row">
   <form>
-   <div class="row">
-     <div class="col-lg-4">
-       <div class="form-group">
-         <label for="base-form-input">UserName</label>
-         <input id="base-form-input" type="text" class="form-control" placeholder="Text input">
-       </div>
-     </div>
-   </div>
+    <div class="form-eleme">
+      <input type="text" class="form-control" placeholder="Text input">
+    </div>
+
   </form>
   </div>
 

@@ -1,12 +1,12 @@
 .btn, .btn-flat {
   border: none;
-  border-radius: 2px;
+  border-radius: $button-radius;
   display: inline-block;
   height: $button-height;
   line-height: $button-line-height;
   // margin-bottom: 15px;
   outline: 0;
-  padding: 0 2rem;
+  padding: 0 1.1rem;
   text-transform: uppercase;
   vertical-align: middle;
   // Gets rid of tap active state
@@ -51,6 +51,26 @@
     @extend .z-depth-1-half;
   }
 }
+
+.btn.btn-success {
+  background-color: $button-color-success;
+  }
+
+.btn.btn-warning {
+  background-color: $button-color-warning;
+  }
+
+.btn.btn-error {
+  background-color: $button-color-error;
+  }
+
+.btn.round {
+  @include round;
+  }
+
+.btn.strong {
+  font-weight: bold;
+  }
 
 // Floating button
 .btn-floating {

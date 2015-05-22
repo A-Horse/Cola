@@ -42,6 +42,10 @@
 
 .component strong {
   color: #0099FF; }
+.component h1 {
+  color: #1976D2; }
+.component h2 {
+  color: #2196F3; }
 
 .css h1 {
   color: #006699; }
@@ -269,6 +273,10 @@
 .css h2 {
   font-family: Economica-Bold;
   color: #666699; }
+.css small {
+  font-family: Economica-Bold;
+  color: #E57373;
+  font-size: 1.1rem; }
 .css #row-center-example {
   background-color: #CCCCCC;
   border: 1px solid #C7BFD3; }
