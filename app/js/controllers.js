@@ -20,6 +20,10 @@ angular.module('cola.controllers', [])
 
     })
 
-  .controller('TestCtrl', function($scope) {
+    .controller('JavascriptCtrl', function($scope) {
+
+    })
+
+    .controller('TestCtrl', function($scope) {
 
     });

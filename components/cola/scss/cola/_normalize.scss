@@ -13,6 +13,17 @@ html {
   -webkit-text-size-adjust: 100%;
   /* 2 */ }
 
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
 /**
  * Remove default margin.
  */

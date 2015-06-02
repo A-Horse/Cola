@@ -1,4 +1,7 @@
-angular.module('cola', ['ui.router','ngAnimate', 'cola.controllers'])
+angular.module('cola', [
+  'ui.router',
+  // 'ngAnimate',
+  'cola.controllers'])
     .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('dash', {
@@ -25,6 +28,11 @@ angular.module('cola', ['ui.router','ngAnimate', 'cola.controllers'])
           url: '/font',
           templateUrl: 'templates/font.html',
           controller: 'FontCtrl'
+        })
+        .state('javascript', {
+          url: '/js',
+          templateUrl: 'templates/javascript.html',
+          controller: 'JavascriptCtrl'
         })
         .state('test', {
           url: '/test',

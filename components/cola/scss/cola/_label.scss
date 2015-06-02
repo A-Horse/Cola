@@ -1,0 +1,71 @@
+$label-hight: 1.01em !default;
+$label-base-bg: $Green-Sky-Blue;
+/***Notice!!! ***/
+
+//So many Bug
+// [1] 比例
+// [2] maybe box-sizing?
+span.label {
+    font: {
+        weight: 500;
+    }
+    background: $label-base-bg;
+    display: inline-block;
+    margin: 0 rem-calc(15) rem-calc(15) 0;
+    padding: {
+        top: $label-hight/2;
+        bottom: $label-hight/2;
+        left: rem-calc(15);
+        right: rem-calc(25);
+    }
+    position: relative;
+    &:before {
+        content: " ";
+        background-color: #fff;
+        color: #fff;
+        display: block;
+        position: absolute;
+        height: $label-hight/2;
+        width: $label-hight/2;
+        top: 50%;
+        left: 88%;
+        transform: translate(0, -50%);
+        border: {
+            radius: 50%;
+        }
+    }
+    &:after {
+        display: block;
+        content: " ";
+        position: absolute;
+        right: -2.1em;
+        top: 0;
+        border: 1.119em solid transparent;
+        border-left: 1.119em solid $label-base-bg;
+    }
+}
+
+span.label.small {
+    font: {
+        size: 0.8em;
+    }
+      padding: {
+        top: $label-hight/2.2;
+        bottom: $label-hight/2.2;
+        left: rem-calc(13);
+        right: rem-calc(20);
+    }
+    &:after {
+        display: block;
+        content: " ";
+        position: absolute;
+        right: -2em;
+        top: 0;
+        border: 1.09em solid transparent;
+        border-left: 1.09em solid $label-base-bg;
+    }
+}
+
+.lalel.horizon {}
+
+.label.vertical {}
