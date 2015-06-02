@@ -65,9 +65,9 @@ a {
   color: $link-color;
   text-decoration: none;}
 
-/* a:hover,
-/* a:active {
-/*   text-decoration: underline;}
+a:hover,
+a:active {
+  color: lighten($link-color, 20%)}
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.

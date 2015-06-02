@@ -18,4 +18,8 @@ angular.module('cola.controllers', [])
 
     .controller('ComponentCtrl', function($scope) {
 
+    })
+
+  .controller('TestCtrl', function($scope) {
+
     });

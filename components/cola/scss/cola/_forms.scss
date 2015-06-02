@@ -8,8 +8,15 @@
   }
 }
 
+@mixin underline-form-control-focus($color: $input-border-focus) {
+  $color-rgba: rgba(red($color), green($color), blue($color), .6);
+  &:focus:not([readonly]) {
+    border-bottom: 1px solid $LightGreen600;
+    box-shadow: 0 1px 0 0 $LightGreen600;
+  }
+}
+
 .form-control {
-  box-sizing: border-box;
   display: block;
   width: 100%;
   height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
@@ -28,6 +35,7 @@
   @include form-control-focus;
   @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
   @include placeholder;
+  @include box-sizing;
   // Placeholder
   //@include placeholder;
 
@@ -49,7 +57,29 @@
   }
 }
 
+.form-control.underline {
+  border: none;
+  border-bottom: 1px solid #bbb;
+  border-radius: 0;
+  outline: none;
+  margin: 0 0 15px 0;
+  padding: 0;
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0);
+  @include underline-form-control-focus;
+  }
+
+// Styling for input field wrapper
+
 .form-group {
   margin-bottom: $form-group-margin-bottom;
+  @include box-sizing;
+  label {
+    display: inline-block;
+    max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: $Dark-Purple;
+    }
 
 }

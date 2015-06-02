@@ -65,6 +65,7 @@
     "gulp-plumber": "^1.0.0",
     "gulp-rename": "^1.2.0",
     "gulp-replace": "^0.5.3",
+    "gulp-uglify": "^1.2.0",
     "inflight": "^1.0.4",
     "inherits": "^2.0.1",
     "jquery": "1.11.2",

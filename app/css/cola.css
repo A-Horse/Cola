@@ -2,10 +2,10 @@
 .z-depth-0 {
   box-shadow: none !important; }
 
-.z-depth-1, .btn, .btn-large, .btn-floating {
+.z-depth-1, .btn, .btn.small, .btn.large, .btn.xlarge, .btn.circle {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
-.z-depth-1-half, .btn:hover, .btn-large:hover, .btn-floating:hover {
+.z-depth-1-half, .btn:hover, .btn.circle:hover {
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
 
 .z-depth-2 {
@@ -87,9 +87,8 @@ a {
   color: #337ab7;
   text-decoration: none; }
 
-/* a:hover,
-/* a:active {
-/*   text-decoration: underline;}
+a:hover, a:active {
+  color: #78acd9; }
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
@@ -877,7 +876,6 @@ td, th {
     margin-left: 100%; } }
 
 .form-control {
-  box-sizing: border-box;
   display: block;
   width: 100%;
   height: 34px;
@@ -897,7 +895,10 @@ td, th {
   -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   -ms-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; }
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
   .form-control:focus {
     border-color: #66afe9;
     outline: 0;
@@ -915,8 +916,30 @@ td, th {
   .form-control[disabled], fieldset[disabled] .form-control {
     cursor: false; }
 
+.form-control.underline {
+  border: none;
+  border-bottom: 1px solid #bbb;
+  border-radius: 0;
+  outline: none;
+  margin: 0 0 15px 0;
+  padding: 0;
+  box-shadow: none;
+  background-color: transparent; }
+  .form-control.underline:focus:not([readonly]) {
+    border-bottom: 1px solid #7CB342;
+    box-shadow: 0 1px 0 0 #7CB342; }
+
 .form-group {
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .form-group label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #561D49; }
 
 .card {
   -moz-box-shadow: 2px 4px 5px 0px #d7d7d7;
@@ -935,6 +958,23 @@ td, th {
     padding: 0;
     text-align: center;
     font-family: FlowerBold; }
+  .card .card-content {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1.5rem; }
+    .card .card-content .card-title {
+      font-size: 1.25rem;
+      color: ligten(#000000, 10%); }
+  .card .card-action {
+    margin-top: 1.3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem; }
+    .card .card-action a {
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin-right: 1.2rem; }
 
 .card.article .article-content {
   background: #fff;
@@ -953,14 +993,16 @@ td, th {
     border: 1px solid #757D75;
     border-radius: 50%; }
     .card.article .article-content a i:hover, .card.article .article-content a i:active {
-      text-decoration: none; }
-  .card.article .article-content a i:hover {
-    color: #CF000F; }
+      text-decoration: none;
+      color: #78acd9; }
   .card.article .article-content img.post-icon {
     position: absolute;
     width: 3rem;
     border-radius: 50%;
     margin-top: -3rem; }
+
+.card.radius {
+  border-radius: 0.25rem; }
 
 .panel {
   -moz-box-shadow: 2px 4px 5px 0px #d7d7d7;
@@ -1048,6 +1090,9 @@ td, th {
 
 .pull-left {
   float: left !important; }
+
+.center-text {
+  text-align: center; }
 
 .hidden {
   display: none !important; }
@@ -1259,7 +1304,7 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.btn, .btn-large, .btn-flat {
+.btn, .btn.small, .btn.large, .btn.xlarge {
   border: none;
   border-radius: 0.1875rem;
   display: inline-block;
@@ -1271,22 +1316,22 @@ pre {
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent; }
 
-.btn.disabled, .disabled.btn-large, .btn-floating.disabled, .btn-large.disabled, .btn:disabled, .btn-large:disabled, .btn-large:disabled, .btn-floating:disabled {
+.btn.disabled, .btn.circle.disabled, .btn.large.disabled, .large.disabled.btn, .btn:disabled, .btn.large:disabled, .large.btn:disabled, .btn-floating:disabled {
   background-color: #DFDFDF !important;
   box-shadow: none;
   color: #9F9F9F !important;
   cursor: default; }
-  .btn.disabled *, .disabled.btn-large *, .btn-floating.disabled *, .btn-large.disabled *, .btn:disabled *, .btn-large:disabled *, .btn-large:disabled *, .btn-floating:disabled * {
+  .btn.disabled *, .btn.circle.disabled *, .btn.large.disabled *, .large.disabled.btn *, .btn:disabled *, .btn.large:disabled *, .large.btn:disabled *, .btn-floating:disabled * {
     pointer-events: none; }
-  .btn.disabled:hover, .disabled.btn-large:hover, .btn-floating.disabled:hover, .btn-large.disabled:hover, .btn:disabled:hover, .btn-large:disabled:hover, .btn-large:disabled:hover, .btn-floating:disabled:hover {
+  .btn.disabled:hover, .btn.circle.disabled:hover, .btn.large.disabled:hover, .large.disabled.btn:hover, .btn:disabled:hover, .btn.large:disabled:hover, .large.btn:disabled:hover, .btn-floating:disabled:hover {
     background-color: #DFDFDF;
     color: #9F9F9F; }
 
-.btn i, .btn-large i, .btn-floating i, .btn-large i, .btn-flat i {
+.btn i, .btn.small i, .btn.large i, .btn.xlarge i, .btn.circle i, .btn.large i, .large.btn i, .btn.xlarge i, .xlarge.btn i {
   font-size: 1.3rem;
   line-height: inherit; }
 
-.btn, .btn-large {
+.btn, .btn.small, .btn.large, .btn.xlarge {
   text-decoration: none;
   color: #fff;
   background-color: #0097A7;
@@ -1298,56 +1343,57 @@ pre {
   -ms-transition: .2s ease-out;
   transition: .2s ease-out;
   cursor: pointer; }
-  .btn:hover, .btn-large:hover {
+  .btn:hover {
     background-color: #00aec1; }
 
-.btn.btn-success, .btn-success.btn-large {
+.btn.success {
   background-color: #7CB342; }
 
-.btn.btn-warning, .btn-warning.btn-large {
+.btn.warning {
   background-color: #ffa32f; }
 
-.btn.btn-error, .btn-error.btn-large {
+.btn.error {
   background-color: #D32F2F; }
 
-.btn.round, .round.btn-large {
+.btn.round {
   border-radius: 0.9375rem; }
 
-.btn.strong, .strong.btn-large {
+.btn.strong {
   font-weight: bold; }
 
-.btn-floating {
-  display: inline-block;
-  color: #fff;
+.btn.circle {
   position: relative;
   overflow: hidden;
   z-index: 1;
   width: 37px;
   height: 37px;
   line-height: 37px;
-  padding: 0;
-  background-color: #0097A7;
+  padding: 0 !important;
   border-radius: 50%;
   transition: .3s;
-  cursor: pointer;
-  vertical-align: middle; }
-  .btn-floating i {
+  cursor: pointer; }
+  .btn.circle i {
     width: inherit;
     display: inline-block;
     text-align: center;
     color: #fff;
     font-size: 1.6rem;
     line-height: 37px; }
-  .btn-floating:before {
+  .btn.circle:before {
     border-radius: 0; }
-  .btn-floating.btn-large {
+  .btn.circle.btn.large, .circle.large.btn {
     width: 55.5px;
     height: 55.5px; }
-    .btn-floating.btn-large i {
+    .btn.circle.btn.large i, .circle.large.btn i {
       line-height: 55.5px; }
+  .btn.circle.btn.xlarge, .circle.xlarge.btn {
+    width: 81.4px;
+    height: 81.4px; }
+    .btn.circle.btn.xlarge i, .circle.xlarge.btn i {
+      line-height: 81.4px; }
 
-button.btn-floating {
-  border: none; }
+.btn.float {
+  display: inline-block; }
 
 .fixed-action-btn {
   position: fixed;
@@ -1368,19 +1414,28 @@ button.btn-floating {
     .fixed-action-btn ul a.btn-floating {
       opacity: 0; }
 
-.btn-flat {
-  box-shadow: none;
-  background-color: transparent;
-  color: #343434;
-  cursor: pointer; }
-  .btn-flat.disabled {
-    color: #b3b3b3;
-    cursor: default; }
+.btn.small, .small.btn {
+  height: 25.2px;
+  line-height: 25.2px;
+  padding-left: 0.77rem;
+  padding-right: 0.77rem; }
+  .btn.small i, .small.btn i {
+    font-size: 0.91rem; }
 
-.btn-large {
+.btn.large, .large.btn {
   height: 54px;
-  line-height: 56px; }
-  .btn-large i {
+  line-height: 56px;
+  padding-left: 1.65rem;
+  padding-right: 1.65rem; }
+  .btn.large i, .large.btn i {
+    font-size: 1.6rem; }
+
+.btn.xlarge, .xlarge.btn {
+  height: 79.2px;
+  line-height: 79.2px;
+  padding-left: 2.42rem;
+  padding-right: 2.42rem; }
+  .btn.xlarge i, .xlarge.btn i {
     font-size: 1.6rem; }
 
 .btn-block {
@@ -1489,3 +1544,11 @@ button.btn-floating {
 /* Firefox Bug: link not triggered */
 a.waves-effect .waves-ripple {
   z-index: -1; }
+
+.while-text {
+  color: #EFEFEF;
+  background-color: #546E7A; }
+  .while-text a {
+    color: #f2f2f2; }
+  .while-text a:hover, .while-text a:active {
+    color: #a6a6a6; }

@@ -23,7 +23,7 @@ var livereload = require('gulp-livereload');
 var connect = require('gulp-connect');
 var plumber = require('gulp-plumber');
 var concat = require('gulp-concat');
-
+var uglify = require('gulp-uglify');
 // ---------------------------------------------------------------------
 // | Helper tasks                                                      |
 // ---------------------------------------------------------------------
@@ -210,6 +210,7 @@ gulp.task('sass:cola', function(){
     .pipe(plumber())
     .pipe(sass())
     .pipe(gulp.dest('app/css'))
+    .pipe(gulp.dest('../Guess-Game/front/app/css/vendor'))
     .pipe(connect.reload())
     .pipe(livereload());
 });
@@ -271,6 +272,13 @@ gulp.task('watch:app', function(){
              ['sass:app']);
 });
 
+//uglify
+gulp.task('compress:cola', function() {
+  return gulp.src('app/js/lib/cola.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist'));
+});
+
 //connect
 //
 gulp.task('connect', function(){
@@ -326,3 +334,6 @@ gulp.task('serve',
            'watch:app',
            'watch:font-awesome'
           ]);
+
+gulp.task('compress',
+          ['compress:cola']);

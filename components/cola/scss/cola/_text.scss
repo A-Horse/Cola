@@ -1,0 +1,11 @@
+.while-text {
+    color: $Dark-Snow;
+    background-color: $Dirty-Bule;
+    a {
+        color: darken(#fff, 5%);
+    }
+    a:hover,
+    a:active {
+        color: darken(#fff, 35%);
+    }
+}

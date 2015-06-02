@@ -165,7 +165,7 @@ $input-bg:                       #fff !default;
 $input-bg-disabled:              $gray-lighter !default;
 $input-border-focus:             #66afe9 !default;
 
-
+$input-underline-color-base: $LightGreen600;
 /*** Colors ***/
 
 //button
@@ -178,12 +178,19 @@ $button-color-warning:  lighten($Orange600, 10%) !default;
 $button-color-disabled: #9F9F9F !default;
 $button-color-flat: #343434 !default;
 $button-color-raised: #fff !default;
-$button-floating-size: 37px !default;
+$button-circle-size: 37px !default;
 $button-height: 36px !default;
 $button-font-size-shared: 1.3rem !default;
 $button-large-icon-font-size: 1.6rem !default;
+$button-circle-icon-font-size: 1.6rem !default;
 $button-line-height: 36px !default;
 $button-radius: rem-calc(3px);
+$button-padding-left: 1.1rem;
+//Size Multiple
+$button-large-multiple: 1.5;
+$button-small-multiple: 0.7;
+$button-xlarge-multiple: 2.2;
+$button-huge-multiple: 4.0;
 
 //radius
 $radius: rem-calc(4px);
