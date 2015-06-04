@@ -179,7 +179,7 @@ $button-color-disabled: #9F9F9F !default;
 $button-color-flat: #343434 !default;
 $button-color-raised: #fff !default;
 $button-circle-size: 37px !default;
-$button-height: 36px !default;
+$button-height:  ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
 $button-font-size-shared: 1.3rem !default;
 $button-large-icon-font-size: 1.6rem !default;
 $button-circle-icon-font-size: 1.6rem !default;

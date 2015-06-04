@@ -1,15 +1,33 @@
 // Box sizing
 @mixin box-sizing($boxmodel: border-box) {
-  -webkit-box-sizing: $boxmodel;
-     -moz-box-sizing: $boxmodel;
-          box-sizing: $boxmodel;
+    -webkit-box-sizing: $boxmodel;
+    -moz-box-sizing: $boxmodel;
+    box-sizing: $boxmodel;
+}
+
+@mixin round() {
+    border-radius: $round;
+}
+
+@mixin radius($radiusvalue: $radius) {
+    border-radius: $radiusvalue;
+}
+
+@mixin top-radius($radiusvalue: $radius) {
+    border: {
+        top-left-radius: $radiusvalue;
+        top-right-radius: $radiusvalue;
+        bottom-left-radius: 0;
+        bottom-right-radius: 0;
+    }
 }
 
 
-@mixin round() {
-  border-radius: $round;
-  }
-
-@mixin radius(){
-  border-radius: $radius;
-  }
+@mixin bottom-radius($radiusvalue: $radius) {
+    border: {
+        top-left-radius: 0;
+        top-right-radius: 0;
+        bottom-left-radius: $radiusvalue;
+        bottom-right-radius: $radiusvalue;
+    }
+}
