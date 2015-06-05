@@ -56,6 +56,55 @@
     }
 }
 
+//addon icon
+.input-group {
+  display: inline-table;
+  vertical-align: middle;
+
+    & > *:first-child {
+        @include left-radius;
+
+        &.input-group-addon {
+            border-right: 0;
+        }
+    }
+
+    & > *:last-child {
+        @include right-radius;
+
+        &.form-control {
+            @include right-radius;
+        }
+
+        &.input-group-addon {
+            border-left: 0;
+        }
+    }
+
+
+
+    .input-group-addon {
+        @include box-sizing;
+        margin: 0;
+        display: table-cell;
+        color: #555;
+        line-height: 1;
+        font-size: rem-calc(14);
+        padding: rem-calc(6) rem-calc(12);
+        text-align: center;
+        background-color: #eee;
+        border: 1px solid #ccc;
+
+        & + input {
+            display: table-cell;
+            max-width: 100%;
+            width: auto;
+            margin: 0;
+            border-radius: 0;
+        }
+    }
+}
+
 .form-control.underline {
     border: none;
     border-bottom: 1px solid #bbb;
@@ -89,6 +138,11 @@ form.form-inline {
         display: inline-block;
         max-width: 100%;
         width: auto;
+        & > * {
+            display: inline-block;
+            max-width: 100%;
+            width: auto;
+        }
     }
 }
 

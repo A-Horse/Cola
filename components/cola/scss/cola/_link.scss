@@ -69,8 +69,8 @@ a.link.rv-waterfall {
         padding: 0;
         display: block;
         //to mixins
-        transition: top 0.3s ease 0.2s;
-        -moz-transition: top 0.3s ease 0.2s;
+        transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
         position: relative;
         top: 0;
         color: $link-color;

@@ -293,3 +293,8 @@
       margin: 0;
       padding: 0;
       text-align: center; }
+
+/***************Component***********/
+.base-panel {
+  font-family: BenXiu;
+  line-height: 1.5; }

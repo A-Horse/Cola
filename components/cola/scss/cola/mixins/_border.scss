@@ -31,3 +31,23 @@
         bottom-right-radius: $radiusvalue;
     }
 }
+
+
+@mixin right-radius($radiusvalue: $radius) {
+    border: {
+        top-left-radius: 0;
+        top-right-radius: $radiusvalue;
+        bottom-left-radius: 0;
+        bottom-right-radius: $radiusvalue;
+    }
+}
+
+
+@mixin left-radius($radiusvalue: $radius) {
+    border: {
+        top-left-radius: $radiusvalue;
+        top-right-radius: 0;
+        bottom-left-radius: $radiusvalue;
+        bottom-right-radius: 0;
+    }
+}

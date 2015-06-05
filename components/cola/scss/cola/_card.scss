@@ -27,9 +27,7 @@ $card-action-gap: 1.2rem !default;
             }
             color: ligten(#000000, 10%);
         }
-        p {
-
-        }
+        p {}
         margin: {
             top: 2rem;
             left: 1rem;
@@ -92,4 +90,197 @@ $card-action-gap: 1.2rem !default;
 
 .card.radius {
     @include radius;
+}
+
+.card.cover {
+    @include box-sizing;
+    margin: 0;
+    box-shadow: none;
+    border: 0;
+    overflow: hidden;
+    position: relative;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    a, a:hover, a:active {
+        z-index: 3;
+        outline: medium none;
+        text-decoration: none;
+        color: #000;
+    }
+    a:hover {
+        .card-picture {
+            img {
+                transform: scale(1.01, 1.01);
+                transition: all 0.1s ease-out 0.1s;
+            }
+            transition: all 0.1s ease-out 0.1s;
+            background-size: 100.9% 100.9%;
+        }
+        .card-overlay {
+            opacity: 0.01;
+        }
+    }
+    .card-picture {
+        img {
+            display: table;
+            height: 100%;
+        }
+        padding: 0;
+        margin: 0;
+        position: relative;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        opacity: 1;
+        attachment: fixed;
+        repeat: no-repeat;
+        background: {
+            size: 100% 100%;
+        }
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+    .card-overlay {
+        @include box-sizing;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background: {
+            color: rgba(54, 57, 65, 0.8);
+        }
+        line-height: 300px;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        visibility:visible;
+        transition: all 0.1s ease-out 0s;
+        transition-duration: 0.1s;
+
+        .p-title {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+            opacity: 1;
+            visibility: visible;
+            margin: 0px;
+            padding: 0px;
+            .sep {
+                display: inline-block;
+                vertical-align: middle;
+                height: 1px;
+                width: 14px;
+                background-color: #D4D4D5;
+                margin-right: 4px;
+            }
+            .categories {
+                display: inline-block;
+                vertical-align: middle;
+                color: #D4D4D5;
+                font-family: "sans";
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 14px;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+            }
+            .desc {
+                color: #FFF;
+                font-family: "sans";
+                font-size: 30px;
+                line-height: 30px;
+                margin-top: 10px;
+                max-width: 300px;
+            }
+        }
+    }
+}
+
+.card.reveal {
+    @include box-sizing;
+    margin: 0;
+    box-shadow: none;
+    border: 0;
+    overflow: hidden;
+    position: relative;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+
+    a, a:hover, a:active {
+        z-index: 3;
+        outline: medium none;
+        text-decoration: none;
+    }
+    a:hover {
+        .card-picture {
+            img {
+
+                transition: all 0.1s ease-out 0.1s;
+            }
+        }
+          .card-reveal {
+            top: 0;
+            }
+
+    }
+
+    .card-picture {
+        img {
+            display: table;
+            height: 100%;
+        }
+        width: 100%;
+        height: 100%;
+    }
+
+      .card-reveal {
+        @include box-sizing;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 3;
+        background: {
+            color: rgba(230, 230, 230, 0.85);
+        }
+        line-height: 300px;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        visibility:visible;
+        transition: all 0.4s cubic-bezier(0.075, 0.585, 0.32, 1.275);
+        .p-title {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+            opacity: 1;
+            visibility: visible;
+            margin: 0px;
+            padding: 0px;
+            .sep {
+                display: inline-block;
+                vertical-align: middle;
+                height: 1px;
+                width: 14px;
+                background-color: #D4D4D5;
+                margin-right: 4px;
+            }
+            .categories {
+                display: inline-block;
+                vertical-align: middle;
+                color: #D4D4D5;
+                font-family: "sans";
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 14px;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+            }
+            .desc {
+                color: #FFF;
+                font-family: "sans";
+                font-size: 30px;
+                line-height: 30px;
+                margin-top: 10px;
+                max-width: 300px;
+            }
+        }
+    }
+
 }
