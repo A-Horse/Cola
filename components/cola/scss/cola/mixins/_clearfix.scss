@@ -20,3 +20,7 @@
     clear: both;
   }
 }
+
+@mixin clear($clearvalue: both) {
+  clear: $clearvalue;
+}

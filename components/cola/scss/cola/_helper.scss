@@ -1,0 +1,19 @@
+$sep-dash-top-margin: 1rem;
+$sep-dash-bottom-margin: 0.7em;
+
+//sep-dash
+.sep-dash {
+    width: 100%;
+    text-align: center;
+    margin: {
+    right: auto;
+    left: auto;
+    top: $sep-dash-top-margin;
+    bottom: $sep-dash-bottom-margin;
+    }
+    display: block;
+    vertical-align: top;
+    background-color: #2D373A;
+    width: 28px;
+    height: 2px;
+}

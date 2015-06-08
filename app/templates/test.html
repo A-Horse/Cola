@@ -1,9 +1,48 @@
 <div class="test">
+  <nav class="nav">
+    <div class="nav-header">
+   <a class="nav-brand">
+
+     <img alt="Brand" style="width:25px; height:25px;" src="/img/cola_logo.png">
+</a>
+    </div>
+
+    <div class="nav-left">
+      <ul>
+        <li><a>CSS</a></li>
+        <li><a>Component</a></li>
+        <li class="active"><a>Test</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-form">
+      <form class="form-inline">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="search">
+        </div>
+        <div class="form-group">
+          <a class="btn">GO</a>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="nav-right">
+      <ul>
+        <li><a>Wind</a></li>
+        <li><a>Fire</a></li>
+        <li class="active"><a>Ice</a></li>
+      </ul>
+    </div>
+
+</nav>
+
 <div class="row">
   <div class="col-lg-1">
   </div>
   <div class="col-lg-9">
     <div class="slide-animate" ng-include="'templates/test-wave.html'"></div>
+
   </div>
   <nav class="col-lg-2 slide-nav-bar visible-lg">
     <ul id="sidebar" class="tab tab-stacked" style="position: fixed;">

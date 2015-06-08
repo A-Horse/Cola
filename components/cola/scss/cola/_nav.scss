@@ -1,0 +1,119 @@
+$nav-height: 40px !default;
+$nav-bottom-margin: 0px !default;
+$nav-list-gap: 1em;
+$nav-list-active-bg: $Dark-Snow;
+
+.nav {
+    @include clearfix;
+    & + div {
+        @include clear;
+    }
+    height: $nav-height;
+    position: relative;
+    min-height: $nav-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+    margin-bottom: $nav-bottom-margin;
+    border: 1px solid transparent;
+    // Prevent floats from breaking the navbar
+    @include clearfix;
+    background-color: #F8F8F8;
+    border-color: #E7E7E7;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+
+    > * {
+        display: inline-block;
+    }
+      
+      
+      .nav-form {
+        @include top-middle;
+        margin-left: 0.5em;
+        > * {
+          margin: 0;
+          > * {
+            margin: 0;
+            }
+          }
+        }
+}
+
+.nav-header {
+    @include clearfix;
+    height: $nav-height;
+    @media (min-width: $grid-float-breakpoint) {
+        float: left;
+    }
+}
+
+.nav-brand {
+   height: $nav-height;
+    float: left;
+    font-size: 18px;
+    line-height: 20px;
+    display: block;
+    margin-right: 1em;
+    line-height: 20px;
+    &:hover, &:focus {
+        text-decoration: none;
+    }
+    > img {
+        @include top-middle;
+        display: block;
+        border: 0px none;
+    }
+}
+
+.nav-left, .nav-right {
+    height: $nav-height;
+    > ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        height: 100%;
+        > li {
+            position: relative;
+            height: 100%;
+            transition: background-color 0.3s;
+            padding: {
+                left: 0.5em;
+                right: 0.5em;
+            }
+            a {
+                display: inline-block;
+                @include top-middle;
+            }
+        }
+
+        li.active {
+            background-color: $nav-list-active-bg;
+        }
+        
+        li:hover, hi:active {
+
+            background-color: #fff;
+        }
+    }
+}
+
+.nav-left {
+    float: left;
+
+    > ul {
+        float: left;
+        > li {
+            float: left;
+        
+        }
+    }
+}
+
+.nav-right {
+    float: right;
+
+     li {
+        float:  left;
+
+    }
+}

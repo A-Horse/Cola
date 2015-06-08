@@ -29,6 +29,7 @@
     border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    vertical-align: middle;
 
     @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
     @include form-control-focus;
@@ -133,7 +134,7 @@
 }
 
 form.form-inline {
-    display: block;
+    display: inline-block;
     & > * {
         display: inline-block;
         max-width: 100%;
