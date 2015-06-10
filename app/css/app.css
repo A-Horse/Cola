@@ -298,3 +298,11 @@
 .base-panel {
   font-family: BenXiu;
   line-height: 1.5; }
+
+/************javascript*************/
+.javascript h1, .javascript h2 {
+  color: #006699; }
+.javascript P {
+  font-family: KelsonSans-Bold;
+  margin: 0rem auto;
+  color: #990000; }

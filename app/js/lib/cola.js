@@ -1,1 +1,559 @@
-!function(t){"use strict";function e(t){return null!==t&&t===t.window}function n(t){return e(t)?t:9===t.nodeType&&t.defaultView}function a(t){var e,a,i={top:0,left:0},o=t&&t.ownerDocument;return e=o.documentElement,"undefined"!=typeof t.getBoundingClientRect&&(i=t.getBoundingClientRect()),a=n(o),{top:i.top+a.pageYOffset-e.clientTop,left:i.left+a.pageXOffset-e.clientLeft}}function i(t){var e="";for(var n in t)t.hasOwnProperty(n)&&(e+=n+":"+t[n]+";");return e}function o(t){if(d.allowEvent(t)===!1)return null;for(var e=null,n=t.target||t.srcElement;null!==n.parentElement;){if(!(n instanceof SVGElement||-1===n.className.indexOf("waves-effect"))){e=n;break}if(n.classList.contains("waves-effect")){e=n;break}n=n.parentElement}return e}function r(e){var n=o(e);null!==n&&(c.show(e,n),"ontouchstart"in t&&(n.addEventListener("touchend",c.hide,!1),n.addEventListener("touchcancel",c.hide,!1)),n.addEventListener("mouseup",c.hide,!1),n.addEventListener("mouseleave",c.hide,!1))}var s=s||{},u=document.querySelectorAll.bind(document),c={duration:750,show:function(t,e){if(2===t.button)return!1;var n=e||this,o=document.createElement("div");o.className="waves-ripple",n.appendChild(o);var r=a(n),s=t.pageY-r.top,u=t.pageX-r.left,d="scale("+n.clientWidth/100*10+")";"touches"in t&&(s=t.touches[0].pageY-r.top,u=t.touches[0].pageX-r.left),o.setAttribute("data-hold",Date.now()),o.setAttribute("data-scale",d),o.setAttribute("data-x",u),o.setAttribute("data-y",s);var l={top:s+"px",left:u+"px"};o.className=o.className+" waves-notransition",o.setAttribute("style",i(l)),o.className=o.className.replace("waves-notransition",""),l["-webkit-transform"]=d,l["-moz-transform"]=d,l["-ms-transform"]=d,l["-o-transform"]=d,l.transform=d,l.opacity="1",l["-webkit-transition-duration"]=c.duration+"ms",l["-moz-transition-duration"]=c.duration+"ms",l["-o-transition-duration"]=c.duration+"ms",l["transition-duration"]=c.duration+"ms",l["-webkit-transition-timing-function"]="cubic-bezier(0.250, 0.460, 0.450, 0.940)",l["-moz-transition-timing-function"]="cubic-bezier(0.250, 0.460, 0.450, 0.940)",l["-o-transition-timing-function"]="cubic-bezier(0.250, 0.460, 0.450, 0.940)",l["transition-timing-function"]="cubic-bezier(0.250, 0.460, 0.450, 0.940)",o.setAttribute("style",i(l))},hide:function(t){d.touchup(t);var e=this,n=(1.4*e.clientWidth,null),a=e.getElementsByClassName("waves-ripple");if(!(a.length>0))return!1;n=a[a.length-1];var o=n.getAttribute("data-x"),r=n.getAttribute("data-y"),s=n.getAttribute("data-scale"),u=Date.now()-Number(n.getAttribute("data-hold")),l=350-u;0>l&&(l=0),setTimeout(function(){var t={top:r+"px",left:o+"px",opacity:"0","-webkit-transition-duration":c.duration+"ms","-moz-transition-duration":c.duration+"ms","-o-transition-duration":c.duration+"ms","transition-duration":c.duration+"ms","-webkit-transform":s,"-moz-transform":s,"-ms-transform":s,"-o-transform":s,transform:s};n.setAttribute("style",i(t)),setTimeout(function(){try{e.removeChild(n)}catch(t){return!1}},c.duration)},l)},wrapInput:function(t){for(var e=0;e<t.length;e++){var n=t[e];if("input"===n.tagName.toLowerCase()){var a=n.parentNode;if("i"===a.tagName.toLowerCase()&&-1!==a.className.indexOf("waves-effect"))continue;var i=document.createElement("i");i.className=n.className+" waves-input-wrapper";var o=n.getAttribute("style");o||(o=""),i.setAttribute("style",o),n.className="waves-button-input",n.removeAttribute("style"),a.replaceChild(i,n),i.appendChild(n)}}}},d={touches:0,allowEvent:function(t){var e=!0;return"touchstart"===t.type?d.touches+=1:"touchend"===t.type||"touchcancel"===t.type?setTimeout(function(){d.touches>0&&(d.touches-=1)},500):"mousedown"===t.type&&d.touches>0&&(e=!1),e},touchup:function(t){d.allowEvent(t)}};s.displayEffect=function(e){e=e||{},"duration"in e&&(c.duration=e.duration),c.wrapInput(u(".waves-effect")),"ontouchstart"in t&&document.body.addEventListener("touchstart",r,!1),document.body.addEventListener("mousedown",r,!1)},s.attach=function(e){"input"===e.tagName.toLowerCase()&&(c.wrapInput([e]),e=e.parentElement),"ontouchstart"in t&&e.addEventListener("touchstart",r,!1),e.addEventListener("mousedown",r,!1)},t.Waves=s,document.addEventListener("DOMContentLoaded",function(){s.displayEffect()},!1)}(window);
+(function() {
+
+  'use strict';
+
+  MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+
+  var toggle = function() {
+    var child;
+    //document.body.classList.toggle('background--blur');
+    this.parentNode.nextElementSibling.classList.toggle('menu-on');
+
+    // child = this.childNodes[1].classList;
+
+    // if (child.contains('hamburger-icon-to-arrow')) {
+    //   child.remove('hamburger-icon-to-arrow');
+    //   child.add('hamburger-icon-from-arrow');
+    // } else {
+    //   child.remove('hamburger-icon-from-arrow');
+    //   child.add('hamburger-icon-to-arrow');
+    // }
+
+  };
+
+  var observer = new MutationObserver(function(mutations, observer) {
+    // fired when a mutation occurs
+    console.log(mutations, observer);
+
+    var hamburgerIcon = document.querySelector('.hamburger-icon');
+    if(hamburgerIcon){
+      hamburgerIcon.removeEventListener('click', toggle);
+      hamburgerIcon.addEventListener(
+        'click', toggle);
+    }
+
+
+  });
+
+  // define what element should be observed by the observer
+  // and what types of mutations trigger the callback
+  observer.observe(document, {
+    subtree: true,
+    attributes: false
+    //...
+  });
+
+})();
+
+// /* ========================================================================
+//  * Bootstrap: scrollspy.js v3.3.4
+//  * http://getbootstrap.com/javascript/#scrollspy
+//  * ========================================================================
+//  * Copyright 2011-2015 Twitter, Inc.
+//  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+//  * ======================================================================== */
+
+
+// +function ($) {
+//   'use strict';
+
+//   // SCROLLSPY CLASS DEFINITION
+//   // ==========================
+
+//   function ScrollSpy(element, options) {
+//     this.$body          = $(document.body)
+//     this.$scrollElement = $(element).is(document.body) ? $(window) : $(element)
+//     this.options        = $.extend({}, ScrollSpy.DEFAULTS, options)
+//     this.selector       = (this.options.target || '') + ' .nav li > a'
+//     this.offsets        = []
+//     this.targets        = []
+//     this.activeTarget   = null
+//     this.scrollHeight   = 0
+
+//     this.$scrollElement.on('scroll.bs.scrollspy', $.proxy(this.process, this))
+//     this.refresh()
+//     this.process()
+//   }
+
+//   ScrollSpy.VERSION  = '3.3.4'
+
+//   ScrollSpy.DEFAULTS = {
+//     offset: 10
+//   }
+
+//   ScrollSpy.prototype.getScrollHeight = function () {
+//     return this.$scrollElement[0].scrollHeight || Math.max(this.$body[0].scrollHeight, document.documentElement.scrollHeight)
+//   }
+
+//   ScrollSpy.prototype.refresh = function () {
+//     var that          = this
+//     var offsetMethod  = 'offset'
+//     var offsetBase    = 0
+
+//     this.offsets      = []
+//     this.targets      = []
+//     this.scrollHeight = this.getScrollHeight()
+
+//     if (!$.isWindow(this.$scrollElement[0])) {
+//       offsetMethod = 'position'
+//       offsetBase   = this.$scrollElement.scrollTop()
+//     }
+
+//     this.$body
+//       .find(this.selector)
+//       .map(function () {
+//         var $el   = $(this)
+//         var href  = $el.data('target') || $el.attr('href')
+//         var $href = /^#./.test(href) && $(href)
+
+//         return ($href
+//           && $href.length
+//           && $href.is(':visible')
+//           && [[$href[offsetMethod]().top + offsetBase, href]]) || null
+//       })
+//       .sort(function (a, b) { return a[0] - b[0] })
+//       .each(function () {
+//         that.offsets.push(this[0])
+//         that.targets.push(this[1])
+//       })
+//   }
+
+//   ScrollSpy.prototype.process = function () {
+//     var scrollTop    = this.$scrollElement.scrollTop() + this.options.offset
+//     var scrollHeight = this.getScrollHeight()
+//     var maxScroll    = this.options.offset + scrollHeight - this.$scrollElement.height()
+//     var offsets      = this.offsets
+//     var targets      = this.targets
+//     var activeTarget = this.activeTarget
+//     var i
+
+//     if (this.scrollHeight != scrollHeight) {
+//       this.refresh()
+//     }
+
+//     if (scrollTop >= maxScroll) {
+//       return activeTarget != (i = targets[targets.length - 1]) && this.activate(i)
+//     }
+
+//     if (activeTarget && scrollTop < offsets[0]) {
+//       this.activeTarget = null
+//       return this.clear()
+//     }
+
+//     for (i = offsets.length; i--;) {
+//       activeTarget != targets[i]
+//         && scrollTop >= offsets[i]
+//         && (offsets[i + 1] === undefined || scrollTop < offsets[i + 1])
+//         && this.activate(targets[i])
+//     }
+//   }
+
+//   ScrollSpy.prototype.activate = function (target) {
+//     this.activeTarget = target
+
+//     this.clear()
+
+//     var selector = this.selector +
+//       '[data-target="' + target + '"],' +
+//       this.selector + '[href="' + target + '"]'
+
+//     var active = $(selector)
+//       .parents('li')
+//       .addClass('active')
+
+//     if (active.parent('.dropdown-menu').length) {
+//       active = active
+//         .closest('li.dropdown')
+//         .addClass('active')
+//     }
+
+//     active.trigger('activate.bs.scrollspy')
+//   }
+
+//   ScrollSpy.prototype.clear = function () {
+//     $(this.selector)
+//       .parentsUntil(this.options.target, '.active')
+//       .removeClass('active')
+//   }
+
+
+//   // SCROLLSPY PLUGIN DEFINITION
+//   // ===========================
+
+//   function Plugin(option) {
+//     return this.each(function () {
+//       var $this   = $(this)
+//       var data    = $this.data('bs.scrollspy')
+//       var options = typeof option == 'object' && option
+
+//       if (!data) $this.data('bs.scrollspy', (data = new ScrollSpy(this, options)))
+//       if (typeof option == 'string') data[option]()
+//     })
+//   }
+
+//   var old = $.fn.scrollspy
+
+//   $.fn.scrollspy             = Plugin
+//   $.fn.scrollspy.Constructor = ScrollSpy
+
+
+//   // SCROLLSPY NO CONFLICT
+//   // =====================
+
+//   $.fn.scrollspy.noConflict = function () {
+//     $.fn.scrollspy = old
+//     return this
+//   }
+
+
+//   // SCROLLSPY DATA-API
+//   // ==================
+
+//   $(window).on('load.bs.scrollspy.data-api', function () {
+//     $('[data-spy="scroll"]').each(function () {
+//       var $spy = $(this)
+//       Plugin.call($spy, $spy.data())
+//     })
+//   })
+
+// }(jQuery);
+
+/*!
+ * Waves v0.6.4
+ * http://fian.my.id/Waves
+ *
+ * Copyright 2014 Alfiana E. Sibuea and other contributors
+ * Released under the MIT license
+ * https://github.com/fians/Waves/blob/master/LICENSE
+ */
+
+;(function(window) {
+    'use strict';
+
+    var Waves = Waves || {};
+    var $$ = document.querySelectorAll.bind(document);
+
+    // Find exact position of element
+    function isWindow(obj) {
+        return obj !== null && obj === obj.window;
+    }
+
+    function getWindow(elem) {
+        return isWindow(elem) ? elem : elem.nodeType === 9 && elem.defaultView;
+    }
+
+  //元素window中的位置
+    function offset(elem) {
+        var docElem, win,
+            box = {top: 0, left: 0},
+            doc = elem && elem.ownerDocument;
+
+        docElem = doc.documentElement;
+
+        if (typeof elem.getBoundingClientRect !== typeof undefined) {
+            box = elem.getBoundingClientRect();
+        }
+        win = getWindow(doc);
+        return {
+            top: box.top + win.pageYOffset - docElem.clientTop,
+            left: box.left + win.pageXOffset - docElem.clientLeft
+        };
+    }
+
+    function convertStyle(obj) {
+        var style = '';
+
+        for (var a in obj) {
+            if (obj.hasOwnProperty(a)) {
+                style += (a + ':' + obj[a] + ';');
+            }
+        }
+
+        return style;
+    }
+
+    var Effect = {
+
+        // Effect delay
+        duration: 750,
+
+        show: function(e, element) {
+
+            // Disable right click
+            if (e.button === 2) {
+                return false;
+            }
+
+            var el = element || this;
+
+            // Create ripple
+            var ripple = document.createElement('div');
+            ripple.className = 'waves-ripple';
+            el.appendChild(ripple);
+
+            // Get click coordinate and element witdh
+            var pos         = offset(el);
+            var relativeY   = (e.pageY - pos.top);
+            var relativeX   = (e.pageX - pos.left);
+            var scale       = 'scale('+((el.clientWidth / 100) * 10)+')';
+
+            // Support for touch devices
+            if ('touches' in e) {
+              relativeY   = (e.touches[0].pageY - pos.top);
+              relativeX   = (e.touches[0].pageX - pos.left);
+            }
+
+            // Attach data to element
+            ripple.setAttribute('data-hold', Date.now());
+            ripple.setAttribute('data-scale', scale);
+            ripple.setAttribute('data-x', relativeX);
+            ripple.setAttribute('data-y', relativeY);
+
+            // Set ripple position
+            var rippleStyle = {
+                'top': relativeY+'px',
+                'left': relativeX+'px'
+            };
+
+            ripple.className = ripple.className + ' waves-notransition';
+            ripple.setAttribute('style', convertStyle(rippleStyle));
+            ripple.className = ripple.className.replace('waves-notransition', '');
+
+            // Scale the ripple
+            rippleStyle['-webkit-transform'] = scale;
+            rippleStyle['-moz-transform'] = scale;
+            rippleStyle['-ms-transform'] = scale;
+            rippleStyle['-o-transform'] = scale;
+            rippleStyle.transform = scale;
+            rippleStyle.opacity   = '1';
+
+            rippleStyle['-webkit-transition-duration'] = Effect.duration + 'ms';
+            rippleStyle['-moz-transition-duration']    = Effect.duration + 'ms';
+            rippleStyle['-o-transition-duration']      = Effect.duration + 'ms';
+            rippleStyle['transition-duration']         = Effect.duration + 'ms';
+
+            rippleStyle['-webkit-transition-timing-function'] = 'cubic-bezier(0.250, 0.460, 0.450, 0.940)';
+            rippleStyle['-moz-transition-timing-function']    = 'cubic-bezier(0.250, 0.460, 0.450, 0.940)';
+            rippleStyle['-o-transition-timing-function']      = 'cubic-bezier(0.250, 0.460, 0.450, 0.940)';
+            rippleStyle['transition-timing-function']         = 'cubic-bezier(0.250, 0.460, 0.450, 0.940)';
+
+            ripple.setAttribute('style', convertStyle(rippleStyle));
+        },
+
+        hide: function(e) {
+            TouchHandler.touchup(e);
+
+            var el = this;
+            var width = el.clientWidth * 1.4;
+
+            // Get first ripple
+            var ripple = null;
+            var ripples = el.getElementsByClassName('waves-ripple');
+            if (ripples.length > 0) {
+                ripple = ripples[ripples.length - 1];
+            } else {
+                return false;
+            }
+
+            var relativeX   = ripple.getAttribute('data-x');
+            var relativeY   = ripple.getAttribute('data-y');
+            var scale       = ripple.getAttribute('data-scale');
+
+            // Get delay beetween mousedown and mouse leave
+            var diff = Date.now() - Number(ripple.getAttribute('data-hold'));
+            var delay = 350 - diff;
+
+            if (delay < 0) {
+                delay = 0;
+            }
+
+            // Fade out ripple after delay
+            setTimeout(function() {
+                var style = {
+                    'top': relativeY+'px',
+                    'left': relativeX+'px',
+                    'opacity': '0',
+
+                    // Duration
+                    '-webkit-transition-duration': Effect.duration + 'ms',
+                    '-moz-transition-duration': Effect.duration + 'ms',
+                    '-o-transition-duration': Effect.duration + 'ms',
+                    'transition-duration': Effect.duration + 'ms',
+                    '-webkit-transform': scale,
+                    '-moz-transform': scale,
+                    '-ms-transform': scale,
+                    '-o-transform': scale,
+                    'transform': scale,
+                };
+
+                ripple.setAttribute('style', convertStyle(style));
+
+                setTimeout(function() {
+                    try {
+                        el.removeChild(ripple);
+                    } catch(e) {
+                        return false;
+                    }
+                }, Effect.duration);
+            }, delay);
+        },
+
+        // Little hack to make <input> can perform waves effect
+        wrapInput: function(elements) {
+            for (var a = 0; a < elements.length; a++) {
+                var el = elements[a];
+
+                if (el.tagName.toLowerCase() === 'input') {
+                    var parent = el.parentNode;
+
+                    // If input already have parent just pass through
+                    if (parent.tagName.toLowerCase() === 'i' && parent.className.indexOf('waves-effect') !== -1) {
+                        continue;
+                    }
+
+                    // Put element class and style to the specified parent
+                    var wrapper = document.createElement('i');
+                    wrapper.className = el.className + ' waves-input-wrapper';
+
+                    var elementStyle = el.getAttribute('style');
+
+                    if (!elementStyle) {
+                        elementStyle = '';
+                    }
+
+                    wrapper.setAttribute('style', elementStyle);
+
+                    el.className = 'waves-button-input';
+                    el.removeAttribute('style');
+
+                    // Put element as child
+                    parent.replaceChild(wrapper, el);
+                    wrapper.appendChild(el);
+                }
+            }
+        }
+    };
+
+
+    /**
+     * Disable mousedown event for 500ms during and after touch
+     */
+    var TouchHandler = {
+        /* uses an integer rather than bool so there's no issues with
+         * needing to clear timeouts if another touch event occurred
+         * within the 500ms. Cannot mouseup between touchstart and
+         * touchend, nor in the 500ms after touchend. */
+        touches: 0,
+        allowEvent: function(e) {
+            var allow = true;
+
+            if (e.type === 'touchstart') {
+                TouchHandler.touches += 1; //push
+            } else if (e.type === 'touchend' || e.type === 'touchcancel') {
+                setTimeout(function() {
+                    if (TouchHandler.touches > 0) {
+                        TouchHandler.touches -= 1; //pop after 500ms
+                    }
+                }, 500);
+            } else if (e.type === 'mousedown' && TouchHandler.touches > 0) {
+                allow = false;
+            }
+
+            return allow;
+        },
+        touchup: function(e) {
+            TouchHandler.allowEvent(e);
+        }
+    };
+
+
+    /**
+     * Delegated click handler for .waves-effect element.
+     * returns null when .waves-effect element not in "click tree"
+     */
+    function getWavesEffectElement(e) {
+        if (TouchHandler.allowEvent(e) === false) {
+            return null;
+        }
+
+        var element = null;
+        var target = e.target || e.srcElement;
+
+        while (target.parentElement !== null) {
+            if (!(target instanceof SVGElement) && target.className.indexOf('waves-effect') !== -1) {
+                element = target;
+                break;
+            } else if (target.classList.contains('waves-effect')) {
+                element = target;
+                break;
+            }
+            target = target.parentElement;
+        }
+
+        return element;
+    }
+
+    /**
+     * Bubble the click and show effect if .waves-effect elem was found
+     */
+    function showEffect(e) {
+        var element = getWavesEffectElement(e);
+
+        if (element !== null) {
+            Effect.show(e, element);
+
+            if ('ontouchstart' in window) {
+                element.addEventListener('touchend', Effect.hide, false);
+                element.addEventListener('touchcancel', Effect.hide, false);
+            }
+
+            element.addEventListener('mouseup', Effect.hide, false);
+            element.addEventListener('mouseleave', Effect.hide, false);
+        }
+    }
+
+    Waves.displayEffect = function(options) {
+        options = options || {};
+
+        if ('duration' in options) {
+            Effect.duration = options.duration;
+        }
+
+        //Wrap input inside <i> tag
+        Effect.wrapInput($$('.waves-effect'));
+
+        if ('ontouchstart' in window) {
+            document.body.addEventListener('touchstart', showEffect, false);
+        }
+
+        document.body.addEventListener('mousedown', showEffect, false);
+    };
+
+    /**
+     * Attach Waves to an input element (or any element which doesn't
+     * bubble mouseup/mousedown events).
+     *   Intended to be used with dynamically loaded forms/inputs, or
+     * where the user doesn't want a delegated click handler.
+     */
+    Waves.attach = function(element) {
+        //FUTURE: automatically add waves classes and allow users
+        // to specify them with an options param? Eg. light/classic/button
+        if (element.tagName.toLowerCase() === 'input') {
+            Effect.wrapInput([element]);
+            element = element.parentElement;
+        }
+
+        if ('ontouchstart' in window) {
+            element.addEventListener('touchstart', showEffect, false);
+        }
+
+        element.addEventListener('mousedown', showEffect, false);
+    };
+
+    window.Waves = Waves;
+
+    document.addEventListener('DOMContentLoaded', function() {
+        Waves.displayEffect();
+    }, false);
+
+})(window);
