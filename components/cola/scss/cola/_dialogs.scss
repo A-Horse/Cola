@@ -1,4 +1,4 @@
-
+$dialogs-bg: $Yellow200;
 
 .dialogs {
 
@@ -6,5 +6,8 @@
 }
 
 .dialogs.class {
-
+  @include radius;
+  @include thin-solid-border;
+  text-align: center;
+  background-color: $dialogs-bg;
 }

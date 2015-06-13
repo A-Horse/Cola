@@ -51,3 +51,9 @@
         bottom-right-radius: 0;
     }
 }
+
+
+//border shade
+@mixin thin-solid-border($border-color: #000) {
+  border: 1px solid $border-color;
+}

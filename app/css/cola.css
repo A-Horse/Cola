@@ -2520,3 +2520,9 @@ a.btn.icon {
     border-top-right-radius: 0.25rem;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0.25rem; }
+
+.dialogs.class {
+  border-radius: 0.25rem;
+  border: 1px solid #000;
+  text-align: center;
+  background-color: #FFF59D; }
