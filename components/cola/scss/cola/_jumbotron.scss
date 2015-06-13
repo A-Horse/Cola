@@ -1,0 +1,15 @@
+$jumbotron-padding: 2em;
+$jumbotron-bg: $Grey200;
+
+
+.jumbotron {
+  @include radius(5px);
+  padding: $jumbotron-padding ($jumbotron-padding / 1);
+  background-color: $jumbotron-bg;
+
+  > hr {
+    border-top-color: darken($jumbotron-bg, 10%);
+  }
+
+
+}

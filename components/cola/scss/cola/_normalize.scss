@@ -79,7 +79,8 @@ a {
 
 a:hover,
 a:active {
-  color: lighten($link-color, 20%)}
+  color: lighten($link-color, 20%);
+  cursor: pointer;}
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.

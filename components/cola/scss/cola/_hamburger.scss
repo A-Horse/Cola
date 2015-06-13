@@ -1,0 +1,39 @@
+$hamburger-width: 3rem;
+$hamburger-color: $Dirty-Bule;
+$hamburger-gap: 200%;
+$hamburger-height: 30px;
+$hamburger-layer-height: 4px;
+a.hamburger-icon {
+    @include top-middle;
+    @include box-sizing;
+    display: inline-block;
+    cursor: pointer;
+    width: $hamburger-height;
+    height: $hamburger-height;
+    padding: 3px;
+    vertical-align: middle;
+    span.hamburger-layer {
+        display: inline-block;
+        width: $hamburger-height * 0.85;
+        height: $hamburger-layer-height;
+        background: $Lady-Wine;
+        position: relative;
+        &:before, &:after {
+            display: block;
+            width: inherit;
+            height: $hamburger-layer-height;
+            position: absolute;
+            background: inherit;
+            left: 0;
+            content: '';
+        }
+        &:before {
+            top: $hamburger-gap;
+        }
+        &:after {
+            top: -$hamburger-gap;
+        }
+    }
+}
+
+

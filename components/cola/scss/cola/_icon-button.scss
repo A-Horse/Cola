@@ -1,0 +1,49 @@
+$icon-button-bg: transparent;
+$icon-button-padding: 0 rem-calc(8);
+$icon-button-height: rem-calc(30);
+$icon-button-color: $Carolina-Blue;
+$icon-button-insert-color: lighten(#ddd, 8%);
+a.btn.icon {
+    @include z-depth-0;
+    @include radius(3px);
+    background-color: white;
+    border: {
+        color: #ccc;
+        style: solid;
+        width: 1px;
+    }
+    color: $icon-button-color;
+    padding: $icon-button-padding;
+    height: $icon-button-height;
+    line-height: $icon-button-height;
+    margin-bottom: 0px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+
+    &[disabled] {
+      cursor: help;
+      color: #ccc;
+      }
+
+        &.active {
+          border-style: inset;
+          background-color: $icon-button-insert-color;
+          border-color: $icon-button-insert-color;
+          }
+}
+
+.group-icon-button {
+    a.btn.icon {
+        display: table-cell;
+        border: {
+            radius: 0;
+        }
+        &:first-child {
+            @include left-radius;
+        }
+        &:last-child {
+            @include right-radius;
+        }
+    }
+}

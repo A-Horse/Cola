@@ -1,0 +1,15 @@
+$header-padding: rem-calc(10) 1em;
+$header-bg: lighten($BlueGrey100, 10%);
+$header-margin: 0 auto;
+
+header.header {
+    @include radius;
+
+    position: relative;
+    top: 0;
+    width: 80%;
+    padding: $header-padding;
+    background-color: $header-bg;
+    margin: $header-margin;
+
+}

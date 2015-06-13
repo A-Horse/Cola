@@ -186,7 +186,7 @@
                 if (el.tagName.toLowerCase() === 'input') {
                     var parent = el.parentNode;
 
-                    // If input already have parent just pass through
+                  //如果父元素有wave则直接pass
                     if (parent.tagName.toLowerCase() === 'i' && parent.className.indexOf('waves-effect') !== -1) {
                         continue;
                     }

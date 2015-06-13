@@ -1,0 +1,164 @@
+$fancy-font-url: '/font/fancy/';
+$offcial-font-url: '/font/official/';
+$chinese-font-url: '/font/chinese/';
+/****************fancy***************/
+
+@font-face {
+    font-family: GoodDog;
+    src: url( $fancy-font-url + 'GoodDog.otf');
+}
+
+@font-face {
+    font-family: ChunkFive;
+    src: url( $fancy-font-url + 'Chunkfive.otf');
+}
+
+@font-face {
+    font-family: DaysLater;
+    src: url( $fancy-font-url + '28DaysLater.ttf');
+}
+
+@font-face {
+    font-family: Canon;
+    src: url( $fancy-font-url + 'CANON.ttf');
+}
+
+@font-face {
+    font-family: Angelina;
+    src: url( $fancy-font-url + 'angelina.ttf');
+}
+
+@font-face {
+    font-family: FaceYourFears;
+    src: url( $fancy-font-url + 'FaceYourFears.ttf');
+}
+
+@font-face {
+    font-family: SketchRockwell;
+    src: url( $fancy-font-url + 'SketchRockwell-Bold.ttf');
+}
+
+@font-face {
+    font-family: WaltographUI;
+    src: url( $fancy-font-url + 'waltographUI.ttf');
+}
+
+@font-face {
+    font-family: FlowerBold;
+    src: url( $fancy-font-url + 'FlowerBold.ttf');
+}
+
+@font-face {
+    font-family: INDIGO;
+    src: url( $fancy-font-url + 'INDIGO.ttf');
+}
+
+/****************offcial*******************/
+
+@font-face {
+    font-family: Economica-Regulaer;
+    src: url( $offcial-font-url + 'Economica-Regular-OTF.otf');
+}
+
+@font-face {
+    font-family: Economica-Bold;
+    src: url( $offcial-font-url + 'Economica-Bold-OTF.otf');
+}
+
+
+@font-face {
+    font-family: Economica-Italic;
+    src: url( $offcial-font-url + 'Economica-Italic-OTF.otf');
+}
+
+@font-face {
+    font-family: Economica-BoldItalic;
+    src: url( $offcial-font-url + 'Economica-BoldItalic-OTF.otf');
+}
+
+@font-face {
+    font-family: BebasNeue-Bold;
+    src: url( $offcial-font-url + 'BebasNeue Bold.otf');
+}
+
+@font-face {
+    font-family: BebasNeue-Light;
+    src: url( $offcial-font-url + 'BebasNeue Light.otf');
+}
+
+@font-face {
+    font-family: BebasNeue-Book;
+    src: url( $offcial-font-url + 'BebasNeue Book.otf');
+}
+
+@font-face {
+    font-family: BebasNeue-Regular;
+    src: url( $offcial-font-url + 'BebasNeue Regular.otf');
+}
+
+@font-face {
+    font-family: BebasNeue-Thin;
+    src: url( $offcial-font-url + 'BebasNeue Thin.otf');
+}
+
+@font-face {
+    font-family: KelsonSans-Bold;
+    src: url( $offcial-font-url + 'Kelson Sans Bold.otf');
+}
+
+@font-face {
+    font-family: KelsonSans-Light;
+    src: url( $offcial-font-url + 'Kelson Sans Light.otf');
+}
+
+@font-face {
+    font-family: KelsonSans-Regular;
+    src: url( $offcial-font-url + 'Kelson Sans Regular.otf');
+}
+
+
+/***********chinese**************/
+@font-face {
+    font-family: FangzhengXianxi;
+    src: url( $chinese-font-url + '方正正纤黑简体.ttf');
+}
+
+@font-face {
+    font-family: HanyiQuanTang;
+    src: url( $chinese-font-url + '汉仪全唐诗体简.ttf');
+}
+
+@font-face {
+    font-family: LvJianDeXingKai;
+    src: url( $chinese-font-url + '方正字迹-吕建德行楷简体.ttf');
+}
+
+@font-face {
+    font-family: DianYaKaiTi;
+    src: url( $chinese-font-url + '方正字迹-典雅楷体简体.ttf');
+}
+
+@font-face {
+    font-family: YueSong;
+    src: url( $chinese-font-url + '方正清刻本悦宋简体.TTF');
+}
+
+@font-face {
+    font-family: YouCan;
+    src: url( $chinese-font-url + '方正幼线简体.ttf');
+}
+
+@font-face {
+    font-family: BenXiu;
+    src: url( $chinese-font-url + '方正宋刻本秀楷简体.TTF');
+}
+
+@font-face {
+    font-family: OuTi;
+    src: url( $chinese-font-url + '歐體楷書.otf');
+}
+
+@font-face {
+    font-family: SongSan;
+    src: url( $chinese-font-url + '方正宋三_GBK.ttf');
+}
