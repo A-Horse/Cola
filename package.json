@@ -40,6 +40,7 @@
     "lodash.assign": "^3.1.0",
     "map-stream": "0.0.5",
     "pause-stream": "0.0.11",
+    "requirejs": "^2.1.18",
     "split": "^0.3.3",
     "stream-combiner": "^0.2.1",
     "through": "^2.3.7",
@@ -47,6 +48,7 @@
     "vinyl": "^0.4.6"
   },
   "devDependencies": {
+    "amdclean": "^2.7.0",
     "apache-server-configs": "2.13.0",
     "archiver": "^0.14.3",
     "array-uniq": "^1.0.2",

@@ -22,6 +22,16 @@ angular.module('cola.controllers', [])
 
     .controller('JavascriptCtrl', function($scope) {
 
+      $scope.dialogs1click = function() {
+
+          cola.dialogs({
+            text: 'fuck me!'
+          }, {
+            type: 'normal'
+          });
+
+      };
+
     })
 
     .controller('TestCtrl', function($scope) {

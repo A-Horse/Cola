@@ -1,0 +1,12 @@
+$list-bg: #fff;
+$list-item-height: rem-calc(60);
+
+div.list {
+  background-color: $list-bg;
+
+  .item {
+    width: 100%;
+
+    }
+
+  }

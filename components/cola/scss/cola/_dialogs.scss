@@ -5,9 +5,15 @@ $dialogs-bg: $Yellow200;
 
 }
 
-.dialogs.class {
+.dialogs.normal {
   @include radius;
   @include thin-solid-border;
   text-align: center;
   background-color: $dialogs-bg;
+
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 10px;
 }

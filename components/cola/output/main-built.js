@@ -1,0 +1,1 @@
+define("core",[],function(){"use strict";var e="0.1",t={};return t.version=e,t}),define("announcement",["./core"],function(e){"use strict";e.announcement=function(){console.log("Welcome to use Cola framework!")}}),define("cola",["./core","./announcement"],function(e){return window.cola=e}),require(["cola"],function(e){e.announcement()}),define("main",function(){});

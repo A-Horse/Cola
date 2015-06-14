@@ -2521,8 +2521,18 @@ a.btn.icon {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0.25rem; }
 
-.dialogs.class {
+.dialogs.normal {
   border-radius: 0.25rem;
   border: 1px solid #000;
   text-align: center;
-  background-color: #FFF59D; }
+  background-color: #FFF59D;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 10px; }
+
+div.list {
+  background-color: #fff; }
+  div.list .item {
+    width: 100%; }
