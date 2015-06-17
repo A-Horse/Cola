@@ -25,12 +25,12 @@ $nav-border-color: #E7E7E7;
     }
     .nav-form {
         //@include top-middle;
-          float: left;
-          height: $nav-height;
+        float: left;
+        height: $nav-height;
         margin-left: 0.5em;
         form {
-          @include top-middle;
-          }
+            @include top-middle;
+        }
         > * {
             margin: 0;
             > * {
@@ -115,29 +115,33 @@ $nav-border-color: #E7E7E7;
 }
 
 .nav-hamburger-list {
-  @include transition(all .3s ease-out);
-  @include clearfix;
-  clear: both;
+    @include clearfix;
+    @include transition(max-height 0.3s);
+    clear: both;
     display: block;
+    max-height: 0;
+
     background-color: $nav-bg;
     padding: 0;
     margin: 0;
     overflow: hidden;
     ul {
-      width: 100%;
+        width: 100%;
         list-style: none;
         margin: 0;
         padding: 0;
         li {
-          text-align: center;
-          padding: 5px;
+            text-align: center;
+            padding: 5px;
             border: {
                 top: solid 1px darken($nav-border-color, 10%);
             }
         }
     }
+    &.on {
+        max-height: 220px;
 
-
+    }
 }
 
 .nav {

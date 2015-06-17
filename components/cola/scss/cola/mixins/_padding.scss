@@ -1,0 +1,8 @@
+@mixin top-bottom-padding($padding: 10px) {
+    padding: {
+        top: $padding;
+        bottom: $padding;
+        left: 0;
+        right: 0;
+    }
+}

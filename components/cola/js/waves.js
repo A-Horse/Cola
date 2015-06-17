@@ -276,7 +276,11 @@
     /**
      * Bubble the click and show effect if .waves-effect elem was found
      */
+
+  //绑定了每一次点击事件
+
     function showEffect(e) {
+
         var element = getWavesEffectElement(e);
 
         if (element !== null) {

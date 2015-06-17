@@ -1,0 +1,11 @@
+
+
+.tip {
+
+  &:hover {
+    :before {
+      content: 'HI, I'm a tip!';
+      }
+    }
+
+}

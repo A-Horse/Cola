@@ -86,10 +86,13 @@ gulp.task('sass:font-awesome', function(){
 gulp.task('concat:cola', function() {
   return gulp.src([
     'components/cola/js/cola.js',
+    // 'components/cola/js/event.js',
+    //'components/cola/js/observer.js',
     'components/cola/js/announcement.js',
-    'components/cola/js/dialogs.js',
+    'components/cola/js/waves.js',
     'components/cola/js/hamburger.js',
-    'components/cola/js/wave.js',
+    'components/cola/js/dialogs.js',
+    'components/cola/js/collapse.js',
   ])
     .pipe(concat('cola.js'))
     .pipe(gulp.dest('app/js/lib'));
@@ -192,6 +195,7 @@ gulp.task('serve',
            'sass:cola',
            'sass:app',
            'sass:font-awesome',
+           'concat:cola',
            'connect',
            'connect:html',
            'connect:css',
@@ -204,7 +208,7 @@ gulp.task('serve',
           ]);
 
 gulp.task('compress',
-          ['compress:cola']);
+          ['Compress:cola']);
 
 gulp.task('optimize',
          ['optimize:cola']);

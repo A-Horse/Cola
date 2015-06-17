@@ -1,11 +1,36 @@
 $list-bg: #fff;
 $list-item-height: rem-calc(60);
+$list-item-bg: #ccc;
+$list-bg: #ddd;
+$list-margin: 10px;
+$list-border-color: #C6D5CD;
 
-div.list {
-  background-color: $list-bg;
+.list-container {
+  @include box-sizing;
+  @include top-bottom-margin($list-margin);
+}
 
+.list {
+  @include box-sizing;
+
+  //background-color: $list-bg;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 5px;
   .item {
+    @include top-bottom-padding(10px);
+    margin: 0;
     width: 100%;
+    //background-color:  $list-item-bg;
+    border-top: solid 1px $list-border-color;
+
+    &:last-child {
+      border-bottom: solid 1px $list-border-color;
+      }
+
+    > * {
+      margin: 0;
+      }
 
     }
 
