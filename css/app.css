@@ -1,0 +1,342 @@
+.slide-animate-container {
+  position: relative;
+  background: white;
+  border: 1px solid black;
+  height: 40px; }
+
+.slide-animate {
+  padding: 10px; }
+
+.slide-animate.ng-enter, .slide-animate.ng-leave {
+  -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  padding: 10px; }
+
+.slide-animate.ng-enter {
+  top: -50px; }
+
+.slide-animate.ng-enter.ng-enter-active {
+  top: 0; }
+
+.slide-animate.ng-leave {
+  top: 0; }
+
+.slide-animate.ng-leave.ng-leave-active {
+  top: 50px; }
+
+.groud-title {
+  margin: 0;
+  padding: 0;
+  font-family: WaltographUI; }
+  .groud-title + hr {
+    border-top: 1.5px solid #ddd;
+    margin-top: 0;
+    margin-bottom: 0.5rem; }
+
+.component strong {
+  color: #0099FF; }
+.component h1 {
+  color: #1976D2; }
+.component h2 {
+  color: #2196F3; }
+
+.css h1 {
+  color: #006699; }
+.css p {
+  font-family: KelsonSans-Bold;
+  margin: 0rem auto; }
+
+/******************Font************/
+.font-show {
+  padding: 1rem;
+  border-radius: 1rem; }
+  .font-show h1 {
+    margin-top: 1rem;
+    margin-bottom: 0; }
+  .font-show p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: bold; }
+
+.font-show-view h1.font-show-title {
+  font-family: FaceYourFears;
+  color: #561D49; }
+  .font-show-view h1.font-show-title + p {
+    font-family: YueSong; }
+.font-show-view .col-lg-7, .font-show-view .col-lg-3 .col-lg-2 {
+  margin: 0.5rem 0; }
+
+.chinese-fangzheng {
+  font-family: FangzhengXianxi;
+  background-color: #E95E47; }
+  .chinese-fangzheng h1 {
+    color: #561D49; }
+  .chinese-fangzheng p {
+    color: #BFCD8D; }
+
+.chinese-hanyiquantang {
+  font-family: HanyiQuanTang;
+  background-color: #E95E47; }
+  .chinese-hanyiquantang h1 {
+    color: #561D49; }
+  .chinese-hanyiquantang p {
+    color: #BFCD8D; }
+
+.chinese-lvjiandexingkai {
+  font-family: LvJianDeXingKai;
+  background-color: #211508; }
+  .chinese-lvjiandexingkai h1 {
+    color: #E95E47; }
+  .chinese-lvjiandexingkai p {
+    color: #C7D693; }
+
+.chinese-dianyakaiti {
+  font-family: DianYaKaiTi;
+  background-color: #211508; }
+  .chinese-dianyakaiti h1 {
+    color: #BFCD8D; }
+  .chinese-dianyakaiti p {
+    color: #FED23D; }
+
+.chinese-yuesong {
+  font-family: YueSong;
+  background-color: #561D49; }
+  .chinese-yuesong h1 {
+    color: #C7D693; }
+  .chinese-yuesong p {
+    color: #C4D8E2; }
+
+.chinese-youcan {
+  font-family: YouCan;
+  background-color: #E95E47; }
+  .chinese-youcan h1 {
+    color: #561D49; }
+  .chinese-youcan p {
+    color: #FED23D; }
+
+.chinese-benxiu {
+  font-family: BenXiu;
+  background-color: #561D49; }
+  .chinese-benxiu h1 {
+    color: #8CB5D6; }
+  .chinese-benxiu p {
+    color: #E95E47; }
+
+.chinese-outi {
+  font-family: OuTi;
+  background-color: #8CBED6; }
+  .chinese-outi h1 {
+    color: #E95E47; }
+  .chinese-outi p {
+    color: black; }
+
+.chinese-songsan {
+  font-family: SongSan;
+  background-color: #FACA16; }
+  .chinese-songsan h1 {
+    color: black; }
+  .chinese-songsan p {
+    color: #E95E47; }
+
+.english-official-economica {
+  font-family: Economica-Bold;
+  background-color: #211508; }
+  .english-official-economica h1 {
+    color: #BFCD8D; }
+  .english-official-economica p {
+    color: #FED23D; }
+
+.english-official-bebaseNeue {
+  font-family: BebasNeue-Bold;
+  background-color: #211508; }
+  .english-official-bebaseNeue h1 {
+    color: #E95E47; }
+  .english-official-bebaseNeue p {
+    color: #C7D693; }
+
+.english-official-kelsonsans {
+  font-family: KelsonSans-Bold;
+  background-color: #561D49; }
+  .english-official-kelsonsans h1 {
+    color: #8CBED6; }
+  .english-official-kelsonsans p {
+    color: #BFCD8D; }
+
+.english-fancy-goodDog {
+  font-family: GoodDog;
+  background-color: #C7D693; }
+  .english-fancy-goodDog h1 {
+    color: #E95E47; }
+  .english-fancy-goodDog p {
+    color: black; }
+
+.english-fancy-chunkfive {
+  font-family: ChunkFive;
+  background-color: #E95E47; }
+  .english-fancy-chunkfive h1 {
+    color: #561D49; }
+  .english-fancy-chunkfive p {
+    color: #FED23D; }
+
+.english-fancy-daysLater {
+  font-family: DaysLater;
+  background-color: #8CBED6; }
+  .english-fancy-daysLater h1 {
+    color: #561D49; }
+  .english-fancy-daysLater p {
+    color: black; }
+
+.english-fancy-canon {
+  font-family: Canon;
+  background-color: #561D49; }
+  .english-fancy-canon h1 {
+    color: #8CB5D6; }
+  .english-fancy-canon p {
+    color: #E95E47; }
+
+.english-fancy-angelina {
+  font-family: Angelina;
+  background-color: #FACA16; }
+  .english-fancy-angelina h1 {
+    color: #561D49; }
+  .english-fancy-angelina p {
+    color: black; }
+
+.english-fancy-faceYourFears {
+  font-family: FaceYourFears;
+  background-color: #211508; }
+  .english-fancy-faceYourFears h1 {
+    color: #8CBED6; }
+  .english-fancy-faceYourFears p {
+    color: #E95E47; }
+
+.english-fancy-sketchRockwell {
+  font-family: SketchRockwell;
+  background-color: #BFCD8D; }
+  .english-fancy-sketchRockwell h1 {
+    color: black; }
+  .english-fancy-sketchRockwell p {
+    color: #561D49; }
+
+.english-fancy-waltographUI {
+  font-family: WaltographUI;
+  background-color: #561D49; }
+  .english-fancy-waltographUI h1 {
+    color: #E95E47; }
+  .english-fancy-waltographUI p {
+    color: #8CBED6; }
+
+.english-fancy-flowerBold {
+  font-family: FlowerBold;
+  background-color: #56A0D3; }
+  .english-fancy-flowerBold h1 {
+    color: #BFCD8D; }
+  .english-fancy-flowerBold p {
+    color: #561D49; }
+
+.english-fancy-indigo {
+  font-family: INDIGO;
+  background-color: #FACA16; }
+  .english-fancy-indigo h1 {
+    color: black; }
+  .english-fancy-indigo p {
+    color: #E95E47; }
+
+.font-name {
+  padding-left: 1rem;
+  font-family: FangzhengXianxi; }
+
+.font-color-illustrate {
+  font-family: FangzhengXianxi; }
+
+/************Color**************/
+.color-view {
+  color: #BECC8C; }
+  .color-view h1, .color-view h2 {
+    font-family: FlowerBold; }
+  .color-view h3 {
+    font-family: Economica-Bold; }
+
+.color-container {
+  height: 3rem;
+  border-radius: 1rem; }
+
+/****************CSS**************/
+.css h2 {
+  font-family: Economica-Bold;
+  color: #666699; }
+.css h3 {
+  font-family: Economica-Bold;
+  color: #3399CC; }
+.css small {
+  font-family: Economica-Bold;
+  color: #E57373;
+  font-size: 1.1rem; }
+.css #row-center-example {
+  background-color: #CCCCCC;
+  border: 1px solid #C7BFD3; }
+  .css #row-center-example .col-center {
+    height: 2rem;
+    background-color: #CCCCFF;
+    border: 1px solid #C7BFD3; }
+    .css #row-center-example .col-center p {
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
+      margin: 0;
+      padding: 0;
+      text-align: center; }
+
+/***************Component***********/
+.base-panel {
+  font-family: BenXiu;
+  line-height: 1.5; }
+
+/************javascript*************/
+.javascript h1, .javascript h2 {
+  color: #006699; }
+.javascript P {
+  font-family: KelsonSans-Bold;
+  margin: 0rem auto;
+  color: #990000; }
+
+#cola-nav-logo {
+  position: relative;
+  top: -10%;
+  height: 2rem;
+  width: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate(0, -15%); }
+
+#nav-logo-text {
+  color: #990000;
+  letter-spacing: 4px;
+  font-family: BebasNeue-Bold;
+  font-size: 1.8rem; }
+
+#nav-list li {
+  letter-spacing: 3px; }
+
+#footer-social-list li {
+  float: left;
+  font-size: 3rem;
+  margin: 1rem; }
+
+footer#footer {
+  background-color: #90CAF9;
+  margin-top: 3rem; }
+
+header#header {
+  background-color: #E0F2F1; }
+
+.slide-nav-bar {
+  font-family: BebasNeue-Bold;
+  font-size: 1rem;
+  letter-spacing: 3px; }
