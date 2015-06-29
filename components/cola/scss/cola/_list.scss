@@ -4,13 +4,16 @@ $list-item-bg: #ccc;
 $list-bg: #ddd;
 $list-margin: 10px;
 $list-border-color: #C6D5CD;
+$list-thumbs-size: 70px;
 
-.list-container {
+
+//list helper {
+
+div.list-container {
   @include box-sizing;
   @include top-bottom-margin($list-margin);
-}
 
-.list {
+  .list {
   @include box-sizing;
 
   //background-color: $list-bg;
@@ -23,15 +26,67 @@ $list-border-color: #C6D5CD;
     width: 100%;
     //background-color:  $list-item-bg;
     border-top: solid 1px $list-border-color;
-
+    line-height: 100%;
     &:last-child {
       border-bottom: solid 1px $list-border-color;
       }
 
-    > * {
+        img {
+          margin-left:10px;
+          vertical-align: middle;
+          height: $list-thumbs-size;
+          width: $list-thumbs-size;
+          }
+
+            > * {
       margin: 0;
       }
+
+        > p {
+          vertical-align: middle;
+          }
+
+        > p, div {
+          display: inline-block;
+          }
 
     }
 
   }
+
+}
+
+
+
+ul.list {
+  list-style: none;
+
+  li {
+    @include box-sizing;
+    margin: 1rem auto;
+    }
+}
+
+
+ul.list.panel {
+
+  li {
+    @include box-sizing;
+    @include micro-shadow;
+    border: 1px solid #d7d7d7;
+    border-radius:  rem-calc(2);
+    padding: 0;
+  }
+
+}
+
+ul.list.panel.radius {
+
+  li {
+    @include micro-shadow;
+    border: 1px solid #d7d7d7;
+    border-radius:  rem-calc(4);
+    padding: 0;
+  }
+
+}

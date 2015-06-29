@@ -3,19 +3,25 @@ $panel-enhanced-width: rem-calc(6px);
 $panel-enhanced-color: $Dark-Coffee;
 $panel-radius: rem-calc(10);
 
-.panel {
+div.text-panel {
+  @include radius(4px);
+  background-color: #EEEEEE;
+  padding: 0.5rem 1rem;
+}
+
+div.panel {
   @include micro-shadow;
   border: 1px solid #d7d7d7;
   border-radius:  rem-calc(2);
   padding: $panel-padding;
   }
 
-.panel.radius {
+div.panel.radius {
   border-radius: $panel-radius;
   }
 
 
-.panel.enhanced {
+div.panel.enhanced {
   border-left: {
   style: solid;
   width: $panel-enhanced-width;

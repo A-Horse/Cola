@@ -58,6 +58,9 @@ gulp.task('sass:cola', function(){
     .pipe(sass())
     .pipe(gulp.dest('app/css'))
     .pipe(gulp.dest('../Guess-Game/front/app/css/vendor'))
+    .pipe(gulp.dest('../LoveTime/front/app/css/vendor'))
+    .pipe(gulp.dest('../PsychologyDog/front/app/css/vendor'))
+    .pipe(gulp.dest('../CoffeeClub/front/app/css/vendor'))
     .pipe(connect.reload())
     .pipe(livereload());
 });
@@ -95,7 +98,10 @@ gulp.task('concat:cola', function() {
     'components/cola/js/collapse.js',
   ])
     .pipe(concat('cola.js'))
-    .pipe(gulp.dest('app/js/lib'));
+    .pipe(gulp.dest('app/js/lib'))
+    .pipe(gulp.dest('/home/linaro/LoveTime/front/app/js/vendor'))
+    .pipe(gulp.dest('/home/linaro/CoffeeClub/front/app/js/vendor'))
+    .pipe(gulp.dest('/home/linaro/PsychologyDog/front/app/js/vendor'));
 });
 
 

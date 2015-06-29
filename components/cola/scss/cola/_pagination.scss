@@ -1,0 +1,36 @@
+
+
+ul.pagination {
+  list-style: none;
+  display: inline-block;
+  padding-left: 0;
+
+
+  >li {
+    @include border-circle;
+    @include z-depth-1-half;
+    @include box-sizing;
+    float: left;
+    display: inline;
+    margin: auto 0.5rem;
+    height: 2rem;
+    width: 2rem;
+    position: relative;
+    //background-color: $Dark-Snow;
+    padding: 0.5rem;
+    text-align: center;
+    >a  {
+    text-align: center;
+      position: relative;
+      vertical-align: middle;
+      &:before {
+        content: " ";
+        vertical-align: middle;
+        }
+
+      }
+
+    }
+
+
+}

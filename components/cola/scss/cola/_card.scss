@@ -147,7 +147,6 @@ $card-action-gap: 1.2rem !default;
         background: {
             color: rgba(54, 57, 65, 0.8);
         }
-        line-height: 300px;
         width: 100%;
         height: 100%;
         opacity: 1;
@@ -156,39 +155,35 @@ $card-action-gap: 1.2rem !default;
         transition-duration: 0.1s;
 
         .p-title {
-            display: inline-block;
+          @include top-middle;
+            display: block;
             vertical-align: middle;
             line-height: normal;
             opacity: 1;
             visibility: visible;
             margin: 0px;
-            padding: 0px;
+            left: 1em;
             .sep {
-                display: inline-block;
+                display: block;
                 vertical-align: middle;
                 height: 1px;
                 width: 14px;
                 background-color: #D4D4D5;
-                margin-right: 4px;
+                margin: 10px 0;
             }
             .categories {
                 display: inline-block;
                 vertical-align: middle;
                 color: #D4D4D5;
                 font-family: "sans";
-                font-size: 16px;
                 font-weight: bold;
-                line-height: 14px;
                 letter-spacing: 0.05em;
                 text-transform: uppercase;
             }
             .desc {
                 color: #FFF;
                 font-family: "sans";
-                font-size: 30px;
-                line-height: 30px;
                 margin-top: 10px;
-                max-width: 300px;
             }
         }
     }
@@ -211,7 +206,6 @@ $card-action-gap: 1.2rem !default;
     a:hover {
         .card-picture {
             img {
-
                 transition: all 0.1s ease-out 0.1s;
             }
         }
@@ -283,4 +277,42 @@ $card-action-gap: 1.2rem !default;
         }
     }
 
+}
+
+  .card.production {
+      border: none;
+      box-shadow: none;
+      width: 100%;
+      .production-show {
+          img {
+              @include horizon-center;
+          }
+      }
+        .production-detail {
+          margin-top: 1rem;
+          color: #777;
+          font-weight: 700;
+          > p {
+            margin: 0;
+            }
+              i {
+                margin: auto 2px;
+                }
+          }
+            .production-action {
+              margin: 1rem;
+              }
+  }
+
+
+.card.item {
+  .card-title{
+    text-align: center;
+    font: {
+    size: 1.2rem;
+    }
+    }
+      .card-content{
+        margin: 0.3rem 0.3rem;
+        }
 }

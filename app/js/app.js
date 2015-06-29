@@ -1,6 +1,6 @@
 angular.module('cola', [
   'ui.router',
-  // 'ngAnimate',
+  //'ngAnimate',
   'cola.controllers'])
     .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider

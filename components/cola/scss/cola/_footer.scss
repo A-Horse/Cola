@@ -13,3 +13,10 @@ footer.page-footer {
     background-color: rgba(51,51,51,.08);
   }
 }
+
+footer.big-footer {
+
+  > ul {
+    list-style: none;
+    }
+}

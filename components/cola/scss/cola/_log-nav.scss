@@ -1,0 +1,27 @@
+
+
+.log-nav  {
+    @include clearfix;
+    color: lighten(#FFCCCC,  8%) ;
+    font: {
+        size: 1.2rem;
+        weight: 700;
+    }
+
+    ul {
+        li {
+            a {
+                color: lighten(#FFCCCC,  8%) ;
+            }
+
+            float: left;
+            margin-left: 1rem;
+        }
+
+        margin: 1rem;
+        float: right;
+        list-style: none;
+    }
+
+
+}

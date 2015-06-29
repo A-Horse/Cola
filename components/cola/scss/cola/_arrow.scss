@@ -1,0 +1,28 @@
+
+.arrow {
+  @include transition(all .3s ease-out);
+  position: relative;
+  color: $Dark-Coffee;
+  left: 0;
+  font-weight: 900;
+  font-family: Cannon;
+  
+  &:before {
+    position: relative;
+    @include transition(all .3s ease-out);
+    opacity: 0;
+    left: 0;
+    content: "\e006";
+    color: $Emerald;
+    }
+      
+   &:hover {
+     left: 1rem;
+     color: $Dark-Coffee;
+     &:before {
+
+       opacity: 1;
+       }
+     }
+
+}

@@ -26,12 +26,107 @@
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+  <header id="header">
 
+          <nav class="white-nav" >
+            <div class="wnav-header">
+            <div class="wnav-brand">
+              <img id="cola-nav-logo" class="wnav-logo" src="/img/cola_logo.png"/ >
+              <span class="wnav-logo-text" id="nav-logo-text">Cola</span>
+            </div>
+            </div>
+
+            <div class="wnav-list" id="nav-list">
+              <ul>
+                <li>
+                  <a href="#css">CSS</a>
+                  <span class="nav-underline"></span>
+                </li>
+
+                <li>
+                  <a href="#component">COMPONENT</a>
+                  <span class="nav-underline"></span>
+                </li>
+
+                <li>
+                  <a href="#js">JAVASCRIPT</a>
+                  <span class="nav-underline"></span>
+                </li>
+
+                <li>
+                  <a href="#font" >FONT</a>
+                  <span class="nav-underline"></span>
+                </li>
+
+                <li>
+                  <a href="#color">COLOR</a>
+                  <span class="nav-underline"></span>
+                </li>
+
+              </ul>
+
+            </div>
+
+
+          </nav>
+
+        </header>
 
 
     <div ui-view>
 
     </div>
+
+
+ <footer class="big-footer" id="footer">
+         <div class="row">
+           <div class="col-md-4 visible-lg-block visible-md-block">
+             <ul class="list" id="footer-social-list">
+               <li><span><i class="fa fa-github"></i></span>
+
+               </li>
+
+               <li><span><i class="fa fa-google"></i></span>
+
+               </li>
+
+               <li><span><i class="fa fa-weixin"></i></span>
+
+               </li>
+
+               <li><span><i class="fa fa-weibo"></i></span>
+
+               </li>
+
+             </ul>
+           </div>
+
+
+
+           <div class="col-md-5 visible-lg-block visible-md-block">
+             <p style="margin-top: 3rem;">COLA IS FREE, OPEN SOURCE AND ALWAYS WILL BE.</p>
+           </div>
+
+           <div class="col-md-3 col-xs-12 sub-new">
+             <h5>SUBSCRIBE TO OUR NEWS</h5>
+             <p>Sign up for our newsletter and get the latest news.</p>
+             <div class="form-group">
+               <div class="input-group">
+                 <input type="email" class="form-control" id="sub-email-input" placeholder="email@example.com">
+                 <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+               </div>
+             </div>
+           </div>
+
+
+
+
+         </div>
+         <div class="bottom-line center-text">
+           <p>Copyright © 2015 Cola Framework. All Rights Reserved. Made with love in Cola, BC, China. | <span><a>Terms & Conditions</a></span> | Privacy Policy | Disclaimer | Shipping & Returns</p>
+         </div>
+
+        </footer>
 
 
 
@@ -41,18 +136,15 @@
     <script src="components/angular/angular.js"></script>
     <script src="components/angular-animate/angular-animate.js"></script>
     <script src="components/angular-ui-router/release/angular-ui-router.js"></script>
-
-
-
     <script src="js/lib/cola.js"></script>
+
+
     <!-- <script src="js/plugins.js"></script> -->
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
     <!-- <script src="js/directive/hamburger.js"></script> -->
 
-    <script>
-      cola.announcement();
-    </script>
+
 
   </body>
 </html>

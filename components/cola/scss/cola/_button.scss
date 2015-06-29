@@ -1,4 +1,6 @@
-a.btn {
+$btn-transparent-color: #F76835;
+
+.btn {
   @inline box-sizing;
     border: none;
     border-radius: $button-radius;
@@ -15,12 +17,12 @@ a.btn {
 }
 
 // Disabled shared style
-a.btn.disabled,
-a.btn.circle.disabled,
-a.btn.large.disabled,
-a.btn:disabled,
-a.btn.large:disabled,
-a.btn-floating:disabled {
+.btn.disabled,
+.btn.circle.disabled,
+.btn.large.disabled,
+.btn:disabled,
+.btn.large:disabled,
+.btn-floating:disabled {
     background-color: $button-bg-color-disabled !important;
     box-shadow: none;
     color: $button-color-disabled !important;
@@ -35,10 +37,10 @@ a.btn-floating:disabled {
 }
 
 // Shared icon styles
-a.btn,
-a.btn.circle,
-a.btn.large,
-a.btn.xlarge {
+.btn,
+.btn.circle,
+.btn.large,
+.btn.xlarge {
     i {
         font-size: $button-font-size-shared;
         line-height: inherit;
@@ -46,7 +48,7 @@ a.btn.xlarge {
 }
 
 // Raised Button
-a.btn {
+.btn {
     text-decoration: none;
     color: $button-color-raised;
     background-color: $button-color;
@@ -61,7 +63,7 @@ a.btn {
     }
 }
 
-a.btn.success {
+.btn.success {
     background-color: $button-color-success;
     &:hover {
         background-color: lighten($button-color-success, 5%);
@@ -69,7 +71,7 @@ a.btn.success {
     }
 }
 
-a.btn.warning {
+.btn.warning {
     background-color: $button-color-warning;
     &:hover {
         background-color: lighten($button-color-warning, 5%);
@@ -77,7 +79,7 @@ a.btn.warning {
     }
 }
 
-a.btn.error {
+.btn.error {
     background-color: $button-color-error;
     &:hover {
         background-color: lighten($button-color-error, 5%);
@@ -85,17 +87,29 @@ a.btn.error {
     }
 }
 
+.btn.transparent {
+  color: $btn-transparent-color;
+   background-color: transparent;
+   border: 1px solid $btn-transparent-color;
+   box-shadow: none;
+     &:hover {
+        background-color: lighten($btn-transparent-color, 5%);
+        color: #fff;
+        @extend .z-depth-1-half;
+    }
+}
+
 //border
-a.btn.round {
+.btn.round {
     @include round;
 }
 
-a.btn.strong {
+.btn.strong {
     font-weight: bold;
 }
 
 // circle button
-a.btn.circle {
+.btn.circle {
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -137,12 +151,12 @@ a.btn.circle {
     }
 }
 
-a.btn.float {
+.btn.float {
     display: inline-block;
 }
 
 // Fixed Action Button
-a.fixed-action-btn {
+.fixed-action-btn {
     position: fixed;
     right: 23px;
     bottom: 23px;
@@ -166,7 +180,7 @@ a.fixed-action-btn {
 }
 
 // button size
-a.btn.small {
+.btn.small {
     @extend .btn;
     height: $button-height * $button-small-multiple;
     line-height: $button-height * $button-small-multiple;
@@ -177,7 +191,7 @@ a.btn.small {
     }
 }
 
-a.btn.large {
+.btn.large {
     @extend .btn;
     height: $button-height * $button-large-multiple;
     line-height: 56px;
@@ -188,7 +202,7 @@ a.btn.large {
     }
 }
 
-a.btn.xlarge {
+.btn.xlarge {
     @extend .btn;
     height: $button-height * $button-xlarge-multiple;
     line-height: ($button-height * $button-xlarge-multiple);
@@ -200,7 +214,7 @@ a.btn.xlarge {
 }
 
 // Block button
-a.btn-block {
+.btn-block {
     display: block;
 }
 

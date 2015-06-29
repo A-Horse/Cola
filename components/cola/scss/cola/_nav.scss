@@ -139,7 +139,7 @@ $nav-border-color: #E7E7E7;
         }
     }
     &.on {
-        max-height: 220px;
+        max-height: 900px;
 
     }
 }
@@ -175,7 +175,6 @@ $nav-border-color: #E7E7E7;
             display: block;
             background: #eee;
             min-height: 600px;
-            height: 125%;
             margin-top: 1em;
             transition: all 300ms;
             opacity: 0;
@@ -373,3 +372,5 @@ $nav-border-color: #E7E7E7;
     }
     100% {}
 }
+
+

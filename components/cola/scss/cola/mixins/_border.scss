@@ -13,6 +13,10 @@
     border-radius: $radiusvalue;
 }
 
+@mixin border-circle() {
+    border-radius: 50%;
+}
+
 @mixin top-radius($radiusvalue: $radius) {
     border: {
         top-left-radius: $radiusvalue;

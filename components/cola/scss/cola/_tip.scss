@@ -1,11 +1,28 @@
 
+.tip-wrap {
+
+
+  }
 
 .tip {
 
+
   &:hover {
-    :before {
-      content: 'HI, I'm a tip!';
+
+    & + .tip-text {
+
+      display: block;
       }
     }
 
 }
+
+.tip + .tip-text {
+  top: -100%;
+  background-color: #000;
+  color: white;
+  position: relative;
+  display: none;
+  margin: 0;
+  padding: 0;
+  }

@@ -1,0 +1,75 @@
+$cc-img-border: 3px solid #DE593A;
+$cc-img-heigth: 150px;
+
+.circle-card {
+    position: relative;
+
+    .cc-img {
+        display: inline-block;
+    img {
+        @include box-sizing;
+        border: $cc-img-border;
+        height: $cc-img-heigth;
+        width: $cc-img-heigth;
+      }
+    }
+   
+    .color-layer {
+        @include box-sizing;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        height: $cc-img-heigth;
+        width: $cc-img-heigth;
+    }
+    
+    .cover-layer {
+        .color-layer {
+            @include transition(all .3s ease-out);
+            i {
+
+                color: #E45F56;
+                font-size: 250%;
+            }
+            div {
+                position: absolute;
+                z-index:4;
+            }
+        }
+        .first-layer {
+            div {
+                position: absolute;
+                left: 65%;
+                top: 35%;
+                transform: rotate(-75deg);
+            }
+        }
+        .second-layer {
+            div {
+                position: absolute;
+                left: 62%;
+                top: 50%;
+                transform: rotate(75deg);
+            }
+        }
+        
+    }
+  
+    &:hover {
+        
+        .cover-layer {
+            .first-layer {
+                transform: rotate(75deg);
+                transform-origin: 40% 85%;
+            }
+            .second-layer {
+                transform: rotate(-75deg);
+                transform-origin: 75% 15%;
+            }
+        }
+        
+    }
+
+}

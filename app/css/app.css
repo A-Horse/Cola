@@ -48,10 +48,9 @@
 
 .css h1 {
   color: #006699; }
-.css P {
+.css p {
   font-family: KelsonSans-Bold;
-  margin: 0rem auto;
-  color: #990000; }
+  margin: 0rem auto; }
 
 /******************Font************/
 .font-show {
@@ -306,3 +305,38 @@
   font-family: KelsonSans-Bold;
   margin: 0rem auto;
   color: #990000; }
+
+#cola-nav-logo {
+  position: relative;
+  top: -10%;
+  height: 2rem;
+  width: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate(0, -15%); }
+
+#nav-logo-text {
+  color: #990000;
+  letter-spacing: 4px;
+  font-family: BebasNeue-Bold;
+  font-size: 1.8rem; }
+
+#nav-list li {
+  letter-spacing: 3px; }
+
+#footer-social-list li {
+  float: left;
+  font-size: 3rem;
+  margin: 1rem; }
+
+footer#footer {
+  background-color: #90CAF9;
+  margin-top: 3rem; }
+
+header#header {
+  background-color: #E0F2F1; }
+
+.slide-nav-bar {
+  font-family: BebasNeue-Bold;
+  font-size: 1rem;
+  letter-spacing: 3px; }
