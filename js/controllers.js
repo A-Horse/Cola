@@ -44,15 +44,7 @@ angular.module('cola.controllers', [])
       $anchorScroll();
     };
 
-      $scope.dialogs1click = function() {
 
-          cola.dialogs({
-            text: 'fuck me!'
-          }, {
-            type: 'normal'
-          });
-
-      };
 
     })
 

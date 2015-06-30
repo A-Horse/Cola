@@ -2521,6 +2521,10 @@ footer.page-footer {
 
 footer.big-footer > ul {
   list-style: none; }
+footer.big-footer .bottom-line {
+  margin: 0; }
+  footer.big-footer .bottom-line p {
+    margin: 0; }
 
 .jumbotron {
   border-radius: 5px;

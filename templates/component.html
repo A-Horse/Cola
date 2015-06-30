@@ -1,4 +1,4 @@
-<div class="component">
+<div class="component" id="component">
 <div class="row">
   <div class="col-lg-1">
   </div>
@@ -17,7 +17,7 @@
     <div id="component-hamburger" class="slide-animate" ng-include="'templates/component-hamburger.html'"></div>
   </div>
   <nav class="col-lg-2 slide-nav-bar visible-lg" style="z-index:3">
-    <ul id="sidebar" class="tab tab-stacked" style="position: fixed;">
+    <ul id="sidebar" class="tab tab-stacked  cola-side-nav" ng-pin container="#component">
       <li>
        <a ng-click="gotoThere('component-icon-buiton')">Icon-Button</a>
       </li>

@@ -28,11 +28,14 @@
         <![endif]-->
   <header id="header">
 
-          <nav class="white-nav" >
+          <nav class="white-nav" id="cola-nav">
             <div class="wnav-header">
             <div class="wnav-brand">
-              <img id="cola-nav-logo" class="wnav-logo" src="img/cola_logo.png"/ >
-              <span class="wnav-logo-text" id="nav-logo-text">Cola</span>
+              <a href="#dash">             
+                <img id="cola-nav-logo" class="wnav-logo" src="img/cola_logo.png"/ >
+                <span class="wnav-logo-text" id="nav-logo-text">Cola</span>
+                
+              </a>
             </div>
             </div>
 
@@ -72,13 +75,14 @@
 
         </header>
 
+  <div class="decoration-line" id="nav-decoration-line"></div>
 
     <div ui-view>
 
     </div>
 
 
- <footer class="big-footer" id="footer">
+    <footer class="big-footer" id="footer">
          <div class="row">
            <div class="col-md-4 visible-lg-block visible-md-block">
              <ul class="list" id="footer-social-list">
@@ -133,14 +137,16 @@
 
     <!-- angular app -->
 
-    <script src="components/angular/angular.js"></script>
-    <script src="components/angular-animate/angular-animate.js"></script>
-    <script src="components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="components/jquery/dist/jquery.min.js"></script>
+    <script src="components/angular/angular.min.js"></script>
+    <script src="components/angular-animate/angular-animate.min.js"></script>
+    <script src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="js/lib/cola.js"></script>
 
 
     <!-- <script src="js/plugins.js"></script> -->
     <script src="js/app.js"></script>
+    <script src="js/directive/ngPin.js"></script>
     <script src="js/controllers.js"></script>
     <!-- <script src="js/directive/hamburger.js"></script> -->
 

@@ -40,14 +40,14 @@
     margin-bottom: 0.5rem; }
 
 .component strong {
-  color: #0099FF; }
+  color: #795548; }
 .component h1 {
-  color: #1976D2; }
+  color: #795548; }
 .component h2 {
-  color: #2196F3; }
+  color: #8D6E63; }
 
 .css h1 {
-  color: #006699; }
+  color: #795548; }
 .css p {
   font-family: KelsonSans-Bold;
   margin: 0rem auto; }
@@ -66,7 +66,7 @@
 
 .font-show-view h1.font-show-title {
   font-family: FaceYourFears;
-  color: #561D49; }
+  color: #795548; }
   .font-show-view h1.font-show-title + p {
     font-family: YueSong; }
 .font-show-view .col-lg-7, .font-show-view .col-lg-3 .col-lg-2 {
@@ -257,7 +257,7 @@
 
 /************Color**************/
 .color-view {
-  color: #BECC8C; }
+  color: #795548; }
   .color-view h1, .color-view h2 {
     font-family: FlowerBold; }
   .color-view h3 {
@@ -270,10 +270,10 @@
 /****************CSS**************/
 .css h2 {
   font-family: Economica-Bold;
-  color: #666699; }
+  color: #8D6E63; }
 .css h3 {
   font-family: Economica-Bold;
-  color: #3399CC; }
+  color: #8D6E63; }
 .css small {
   font-family: Economica-Bold;
   color: #E57373;
@@ -300,7 +300,7 @@
 
 /************javascript*************/
 .javascript h1, .javascript h2 {
-  color: #006699; }
+  color: #795548; }
 .javascript P {
   font-family: KelsonSans-Bold;
   margin: 0rem auto;
@@ -330,10 +330,31 @@
   margin: 1rem; }
 
 footer#footer {
-  background-color: #90CAF9;
-  margin-top: 3rem; }
+  color: white;
+  background-color: #4E342E;
+  margin-top: 3rem;
+  position: relative;
+  bottom: 0;
+  font-family: Economica-Regular; }
 
 .slide-nav-bar {
   font-family: BebasNeue-Bold;
   font-size: 1rem;
   letter-spacing: 3px; }
+
+#sub-email-input {
+  background-color: transparent; }
+
+#cola-nav a {
+  color: #5D4037 !important;
+  font-weight: 900;
+  font-size: 1.4rem; }
+
+.references {
+  overflow: hidden; }
+
+#nav-decoration-line {
+  background-color: #5D4037; }
+
+.cola-side-nav a {
+  color: #6D4C41; }
