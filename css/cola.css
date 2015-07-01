@@ -2713,8 +2713,8 @@ im.circle {
         color: #fff5f5; }
 
 nav.white-nav {
-  height: 4.5rem;
-  line-height: 4.5rem;
+  height: 4rem;
+  line-height: 4rem;
   /* .wnav-dropdown {
 
       /*       margin: 0 2rem;
@@ -2779,12 +2779,12 @@ nav.white-nav {
     clear: both; }
   @media (max-width: 992px) {
     nav.white-nav {
-      line-height: 4rem;
-      height: 4rem; } }
-  @media (max-width: 480px) {
-    nav.white-nav {
       line-height: 3.5rem;
       height: 3.5rem; } }
+  @media (max-width: 480px) {
+    nav.white-nav {
+      line-height: 3rem;
+      height: 3rem; } }
   nav.white-nav > div {
     float: left;
     height: 100%; }
