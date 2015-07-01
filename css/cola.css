@@ -1074,14 +1074,14 @@ form.gapless-form {
 /***********Feedback Icon*********/
 input.form-control.feedback-correct {
   position: relative;
-  background-image: url("/icon/correct.png");
+  background-image: url("/Cola/icon/correct.png");
   background-repeat: no-repeat;
   background-size: 1.25rem 1.25rem;
   background-position: 97% 50%; }
 
 input.form-control.feedback-error {
   position: relative;
-  background-image: url("/icon/error.png");
+  background-image: url("/Cola/icon/error.png");
   background-repeat: no-repeat;
   background-size: 1.25rem 1.25rem;
   background-position: 97% 50%; }

@@ -358,3 +358,9 @@ footer#footer {
 
 .cola-side-nav a {
   color: #6D4C41; }
+
+#dash-text h2 {
+  font-size: 2rem;
+  font-family: KelsonSans-Bold;
+  letter-spacing: 5px;
+  color: #990000; }
